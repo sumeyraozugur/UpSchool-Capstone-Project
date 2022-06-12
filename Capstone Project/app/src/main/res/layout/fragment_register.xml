@@ -133,17 +133,17 @@
     <Button
         android:id="@+id/btnLogin"
         style="@style/button_style"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="110dp"
         android:text="@string/string_create_account"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textPassword"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textPassword"
         app:layout_constraintTop_toBottomOf="@+id/textPassword"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/btnAccount"
         android:text="@string/already_have_an_account"
         app:layout_constraintEnd_toEndOf="@+id/btnLogin"
         app:layout_constraintHorizontal_bias="0.961"

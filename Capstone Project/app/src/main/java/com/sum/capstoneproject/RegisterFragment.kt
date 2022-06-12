@@ -32,7 +32,7 @@ class RegisterFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.textView4.setOnClickListener {
+        binding.btnAccount.setOnClickListener {
             findNavController().navigate(R.id.action_registerFragment_to_forgotPasswordFragment)
         }
 
