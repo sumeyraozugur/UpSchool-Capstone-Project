@@ -8,4 +8,10 @@
     <string name="string_password">PASSWORD</string>
     <string name="string_create_account">Create Account</string>
     <string name="string_login">Login</string>
+    <string name="login">LOGIN</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+    <string name="send">Send</string>
+    <string name="e_mail">E-mail</string>
+    <string name="explanation_for_forgot_password">Please, enter your email address. You will receive a \n link to create a new password via email.</string>
 </resources>
