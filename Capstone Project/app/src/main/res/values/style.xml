@@ -35,4 +35,12 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">38dp</item>
     </style>
+
+    <style name="input_text_field_basic_style">
+        <item name="android:layout_width">316dp</item>
+        <item name="android:layout_height">46dp</item>
+        <item name="android:background">@drawable/text_field_shape</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+    </style>
 </resources>

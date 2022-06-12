@@ -5,12 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
-import com.sum.capstoneproject.databinding.FragmentLoginBinding
 
-class LoginFragment : Fragment() {
-    private var _binding: FragmentLoginBinding? = null
-    private val binding get() = _binding!!
+class ForgotPasswordFragment : Fragment() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,23 +18,17 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        _binding = FragmentLoginBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_forgot_password, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        binding.button.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
-        }
     }
 
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
 
     }
 
