@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Capstone Project</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="string_user_name">USERNAME</string>
+    <string name="string_email">EMAIL</string>
+    <string name="string_phone">PHONE</string>
+    <string name="string_birthday">BIRTHDAY</string>
+    <string name="string_password">PASSWORD</string>
+    <string name="string_create_account">Create Account</string>
+    <string name="string_login">Login</string>
 </resources>
