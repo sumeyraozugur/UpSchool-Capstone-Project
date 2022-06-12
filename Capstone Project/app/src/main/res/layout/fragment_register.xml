@@ -130,9 +130,10 @@
         app:layout_constraintVertical_bias="1.0"
         app:tint="@color/white" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogin"
         style="@style/button_style"
+        app:cornerRadius="15dp"
         android:layout_marginBottom="110dp"
         android:text="@string/string_create_account"
         app:layout_constraintBottom_toBottomOf="parent"
