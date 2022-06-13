@@ -7,37 +7,38 @@
 
     <TextView
         android:id="@+id/textView"
+        style="@style/textView_Title"
         android:text="@string/login"
         app:layout_constraintBottom_toTopOf="@+id/textLoginName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.688"
-        style="@style/textView_Title" />
+        app:layout_constraintVertical_bias="0.65" />
 
     <TextView
         android:id="@+id/textLoginName"
         style="@style/text_style"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="224dp"
-        android:text="@string/string_user_name"
+        android:layout_marginTop="216dp"
+        android:text="@string/string_email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.074"
+        app:layout_constraintHorizontal_bias="0.073"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/login_person_name"
+        style="@style/input_text_field_style"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:drawableStart="@drawable/ic_mail"
         android:inputType="textPersonName"
-        android:drawableStart="@drawable/ic_person_name"
         android:textColor="@color/secondaryColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textLoginName"
         app:layout_constraintTop_toBottomOf="@+id/textLoginName"
-        style="@style/input_text_field_style"
-        android:autofillHints=""
         tools:ignore="LabelFor" />
 
     <TextView
@@ -63,9 +64,9 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogin"
-        app:cornerRadius="15dp"
         style="@style/button_style"
         android:text="@string/string_login"
+        app:cornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textLoginPassword"
         app:layout_constraintStart_toStartOf="@+id/textLoginPassword"
@@ -114,15 +115,23 @@
 
     <TextView
         android:id="@+id/btnForgotPassword"
+        style="@style/text_button"
         android:text="@string/forgot_your_password"
+        app:layout_constraintEnd_toEndOf="@+id/textLoginPassword"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textLoginPassword"
+        app:layout_constraintTop_toBottomOf="@+id/textLoginPassword" />
+
+    <TextView
+        android:id="@+id/btnRegister"
+        style="@style/text_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
         app:layout_constraintEnd_toEndOf="@+id/btnLogin"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/btnLogin"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
-        style="@style/text_button" />
-
-
-
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/productsFragment"
+        android:title="Ürünler"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/basketFragment"
+        android:title="Basket"
+        android:icon="@drawable/ic_shop"
+        />
+    <item
+        android:id="@+id/bagFragment"
+        android:title="Canta"
+        android:icon="@drawable/ic_bag"
+        />
+
+
+</menu>

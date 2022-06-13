@@ -109,7 +109,7 @@
         android:src="@drawable/ic_fb"
         app:backgroundTint="#3B5A9A"
         app:fabSize="mini"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+        app:layout_constraintBottom_toTopOf="@+id/btnCreateAccount"
         app:layout_constraintEnd_toStartOf="@+id/floatingActionButton2"
         app:layout_constraintHorizontal_bias="0.425"
         app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
@@ -131,7 +131,7 @@
         app:tint="@color/white" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnCreateAccount"
         style="@style/button_style"
         app:cornerRadius="15dp"
         android:layout_marginBottom="110dp"
@@ -146,10 +146,10 @@
     <TextView
         android:id="@+id/btnAccount"
         android:text="@string/already_have_an_account"
-        app:layout_constraintEnd_toEndOf="@+id/btnLogin"
+        app:layout_constraintEnd_toEndOf="@+id/btnCreateAccount"
         app:layout_constraintHorizontal_bias="0.961"
-        app:layout_constraintStart_toStartOf="@+id/btnLogin"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        app:layout_constraintStart_toStartOf="@+id/btnCreateAccount"
+        app:layout_constraintTop_toBottomOf="@+id/btnCreateAccount"
         style="@style/text_button"/>
 
 

@@ -31,8 +31,15 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnForgotPassword.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_forgotPasswordFragment)
+        }
+        binding.btnLogin.setOnClickListener{
+            findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+        }
+        binding.btnRegister.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
         }
+
     }
 
 
