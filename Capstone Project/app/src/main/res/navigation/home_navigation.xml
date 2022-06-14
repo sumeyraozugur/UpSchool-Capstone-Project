@@ -3,19 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_navigation"
-    app:startDestination="@id/homeFragment3">
+    app:startDestination="@id/homeFragment">
     <fragment
-        android:id="@+id/homeFragment3"
+        android:id="@+id/homeFragment"
         android:name="com.sum.capstoneproject.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_shopFragment"
+            app:destination="@id/shopFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/shopFragment3"
+        android:id="@+id/shopFragment"
         android:name="com.sum.capstoneproject.ShopFragment"
         android:label="fragment_shop"
-        tools:layout="@layout/fragment_shop" />
+        tools:layout="@layout/fragment_shop" >
+        <action
+            android:id="@+id/action_shopFragment_to_bagFragment"
+            app:destination="@id/bagFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/bagFragment3"
+        android:id="@+id/bagFragment"
         android:name="com.sum.capstoneproject.BagFragment"
         android:label="fragment_bag"
         tools:layout="@layout/fragment_bag" />
