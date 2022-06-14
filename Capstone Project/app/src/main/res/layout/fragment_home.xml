@@ -9,8 +9,9 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="352dp"
-        android:layout_height="311dp"
+        android:layout_width="320dp"
+        android:scaleType="fitXY"
+        android:layout_height="310dp"
         android:layout_marginTop="88dp"
         android:src="@drawable/static_image"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,7 +65,7 @@
         style="@style/textView_Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="86dp"
         android:text="New"
         app:layout_constraintEnd_toEndOf="@+id/textView7"
         app:layout_constraintHorizontal_bias="0.0"

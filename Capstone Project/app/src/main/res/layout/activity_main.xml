@@ -23,6 +23,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/signup_navigation" />
 
+    <!-- app:backgroundTint="@color/purple_700"-->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
