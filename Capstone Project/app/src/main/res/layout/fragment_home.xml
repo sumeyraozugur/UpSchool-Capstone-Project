@@ -73,7 +73,7 @@
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="164dp"
+        android:layout_width="200dp"
         android:layout_height="17dp"
         android:text="You've never seen it before!"
         app:layout_constraintEnd_toEndOf="parent"
