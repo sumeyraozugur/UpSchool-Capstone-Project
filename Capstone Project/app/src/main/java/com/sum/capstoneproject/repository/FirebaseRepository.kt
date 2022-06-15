@@ -7,7 +7,6 @@ import com.google.firebase.ktx.Firebase
 
 class FirebaseRepository {
     private var _isLogin = MutableLiveData<Boolean>()
-
     private var _isRegister = MutableLiveData<Boolean>()
     private var auth = Firebase.auth
 
@@ -41,12 +40,8 @@ class FirebaseRepository {
             if (task.isSuccessful) {
 
                 val currentUser = auth.currentUser
-                currentUser?.let { fbUser ->
-                    val user = hashMapOf(
-                        ID to fbUser.uid,
-                        E_MAIL to eMail,
-
-                    )
+                if (currentUser != null) {
+                    currentUser
 
 
                 }
