@@ -1,137 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/textView"
-        style="@style/textView_Title"
-        android:text="@string/login"
-        app:layout_constraintBottom_toTopOf="@+id/textLoginName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.65" />
+    <data>
+        <variable
+            name="signInFragmentObject"
+            type="com.sum.capstoneproject.ui.login.LoginFragment"
+            />
 
-    <TextView
-        android:id="@+id/textLoginName"
-        style="@style/text_style"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="216dp"
-        android:text="@string/string_email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.073"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    </data>
 
-    <EditText
-        android:id="@+id/login_person_name"
-        style="@style/input_text_field_style"
-        android:layout_marginTop="8dp"
-        android:autofillHints=""
-        android:drawableStart="@drawable/ic_mail"
-        android:inputType="textPersonName"
-        android:textColor="@color/secondaryColor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textLoginName"
-        app:layout_constraintTop_toBottomOf="@+id/textLoginName"
-        tools:ignore="LabelFor" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textViewPassword"
-        style="@style/text_style"
-        android:layout_marginTop="24dp"
-        android:text="@string/string_password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/login_person_name"
-        app:layout_constraintTop_toBottomOf="@+id/login_person_name" />
+        <TextView
+            android:id="@+id/textView"
+            style="@style/textView_Title"
+            android:text="@string/login"
+            app:layout_constraintBottom_toTopOf="@+id/textLoginName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.512"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.65" />
 
-    <EditText
-        android:id="@+id/textLoginPassword"
-        style="@style/input_text_field_style"
-        android:autofillHints=""
-        android:drawableStart="@drawable/ic_lock"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPassword"
-        tools:ignore="LabelFor" />
+        <TextView
+            android:id="@+id/textLoginName"
+            style="@style/text_style"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="216dp"
+            android:text="@string/string_email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.073"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnLogin"
-        style="@style/button_style"
-        android:text="@string/string_login"
-        app:cornerRadius="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textLoginPassword"
-        app:layout_constraintStart_toStartOf="@+id/textLoginPassword"
-        app:layout_constraintTop_toBottomOf="@+id/textLoginPassword" />
+        <EditText
+            android:id="@+id/editTextLoginEmail"
+            style="@style/input_text_field_style"
+            android:layout_marginTop="8dp"
+            android:autofillHints=""
+            android:drawableStart="@drawable/ic_mail"
+            android:inputType="textPersonName"
+            android:textColor="@color/secondaryColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textLoginName"
+            app:layout_constraintTop_toBottomOf="@+id/textLoginName"
+            tools:ignore="LabelFor" />
 
+        <TextView
+            android:id="@+id/textViewPassword"
+            style="@style/text_style"
+            android:layout_marginTop="24dp"
+            android:text="@string/string_password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextLoginEmail"
+            app:layout_constraintTop_toBottomOf="@+id/editTextLoginEmail" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        style="@style/float_button_style"
-        android:layout_marginStart="72dp"
-        android:src="@drawable/ic_google"
-        app:backgroundTint="#1AA9E1"
-        app:fabSize="mini"
-        app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton3"
-        app:layout_constraintStart_toStartOf="@+id/textLoginPassword"
-        app:layout_constraintTop_toBottomOf="@+id/textLoginPassword"
-        app:layout_constraintVertical_bias="1.0"
-        app:tint="@color/white" />
+        <EditText
+            android:id="@+id/editTextLoginPassword"
+            style="@style/input_text_field_style"
+            android:autofillHints=""
+            android:drawableStart="@drawable/ic_lock"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPassword"
+            tools:ignore="LabelFor" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton3"
-        app:backgroundTint="#3B5A9A"
-        android:src="@drawable/ic_fb"
-        app:fabSize="mini"
-        app:tint ="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
-        app:layout_constraintEnd_toStartOf="@+id/floatingActionButton2"
-        app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
-        app:layout_constraintTop_toBottomOf="@+id/textLoginPassword"
-        app:layout_constraintVertical_bias="0.333"
-        style="@style/float_button_style"/>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton2"
-        style="@style/float_button_style"
-        android:layout_marginEnd="70dp"
-        android:src="@drawable/ic_twitter"
-        app:backgroundTint="#CB3E2D"
-        app:fabSize="mini"
-        app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton3"
-        app:layout_constraintEnd_toEndOf="@+id/textLoginPassword"
-        app:layout_constraintTop_toBottomOf="@+id/textLoginPassword"
-        app:layout_constraintVertical_bias="1.0"
-        app:tint="@color/white" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogin"
+            style="@style/button_style"
+            android:text="@string/string_login"
+            app:cornerRadius="15dp"
+            android:onClick="@{() -> signInFragmentObject.signInButton(editTextLoginEmail.getText().toString(),editTextLoginPassword.getText().toString())}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/editTextLoginPassword"
+            app:layout_constraintStart_toStartOf="@+id/editTextLoginPassword"
+            app:layout_constraintTop_toBottomOf="@+id/editTextLoginPassword" />
 
 
-    <TextView
-        android:id="@+id/btnForgotPassword"
-        style="@style/text_button"
-        android:text="@string/forgot_your_password"
-        app:layout_constraintEnd_toEndOf="@+id/textLoginPassword"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/textLoginPassword"
-        app:layout_constraintTop_toBottomOf="@+id/textLoginPassword" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            style="@style/float_button_style"
+            android:layout_marginStart="72dp"
+            android:src="@drawable/ic_google"
+            app:backgroundTint="#1AA9E1"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton3"
+            app:layout_constraintStart_toStartOf="@+id/editTextLoginPassword"
+            app:layout_constraintTop_toBottomOf="@+id/editTextLoginPassword"
+            app:layout_constraintVertical_bias="1.0"
+            app:tint="@color/white" />
 
-    <TextView
-        android:id="@+id/btnRegister"
-        style="@style/text_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Register"
-        app:layout_constraintEnd_toEndOf="@+id/btnLogin"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/btnLogin"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton3"
+            app:backgroundTint="#3B5A9A"
+            android:src="@drawable/ic_fb"
+            app:fabSize="mini"
+            app:tint="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+            app:layout_constraintEnd_toStartOf="@+id/floatingActionButton2"
+            app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
+            app:layout_constraintTop_toBottomOf="@+id/editTextLoginPassword"
+            app:layout_constraintVertical_bias="0.333"
+            style="@style/float_button_style" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton2"
+            style="@style/float_button_style"
+            android:layout_marginEnd="70dp"
+            android:src="@drawable/ic_twitter"
+            app:backgroundTint="#CB3E2D"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton3"
+            app:layout_constraintEnd_toEndOf="@+id/editTextLoginPassword"
+            app:layout_constraintTop_toBottomOf="@+id/editTextLoginPassword"
+            app:layout_constraintVertical_bias="1.0"
+            app:tint="@color/white" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/TbtnLoginForgotPassword"
+            style="@style/text_button"
+            android:text="@string/forgot_your_password"
+            app:layout_constraintEnd_toEndOf="@+id/editTextLoginPassword"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextLoginPassword"
+            app:layout_constraintTop_toBottomOf="@+id/editTextLoginPassword" />
+
+        <TextView
+            android:id="@+id/TbtnLoginRegister"
+            style="@style/text_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            app:layout_constraintEnd_toEndOf="@+id/btnLogin"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/btnLogin"
+            app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

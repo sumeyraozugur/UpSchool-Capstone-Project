@@ -17,4 +17,10 @@
     <string name="forgot_password">Forgot Password</string>
     <string name="continue_shopping">Continue Shopping</string>
     <string name="wrong_email_password">Wrong E-mail or Password, Try Again !</string>
+    <string name="incomplete_information_entered">Incomplete information entered!</string>
+    <string name="invalid_mail">Invalid e-mail address</string>
+    <string name="password_match_error">Passwords do not match</string>
+    <string name="sign_up_snack_text">Registration successfully created</string>
+    <string name="registered_mail">E-mail address already registered!</string>
+
 </resources>

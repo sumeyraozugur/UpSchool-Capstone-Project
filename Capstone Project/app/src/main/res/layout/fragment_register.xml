@@ -1,156 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
+    <data>
+        <variable
+            name="signUpFragmentObject"
+            type="com.sum.capstoneproject.ui.register.RegisterFragment"
+            />
 
-        android:text="REGISTER"
-        style="@style/textView_Title"
-        app:layout_constraintBottom_toTopOf="@+id/textViewName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.791" />
+    </data>
 
-    <TextView
-        android:id="@+id/textViewName"
-        style="@style/text_style"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="144dp"
-        android:text="@string/string_user_name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.074"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/person_name"
-        android:drawableStart="@drawable/ic_person_name"
-        android:inputType="textPersonName"
-        android:textColor="@color/secondaryColor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textViewName"
-        app:layout_constraintTop_toBottomOf="@+id/textViewName"
-        style="@style/input_text_field_style"
-        android:autofillHints=""
-        tools:ignore="LabelFor" />
+        <TextView
 
-    <TextView
-        android:id="@+id/textViewEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/string_email"
-        style="@style/text_style"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/person_name"
-        app:layout_constraintTop_toBottomOf="@+id/person_name"
-        tools:ignore="HardcodedText"/>
+            android:text="REGISTER"
+            style="@style/textView_Title"
+            app:layout_constraintBottom_toTopOf="@+id/textViewName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.791" />
 
+        <TextView
+            android:id="@+id/textViewName"
+            style="@style/text_style"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="144dp"
+            android:text="@string/string_email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.074"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/person_email"
-        style="@style/input_text_field_style"
-        android:autofillHints=""
-        android:drawableStart="@drawable/ic_mail"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="@+id/person_name"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textViewEmail"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEmail"
-        tools:ignore="LabelFor" />
+        <EditText
+            android:id="@+id/editTextRegisterEmail"
+            android:inputType="textPersonName"
+            android:drawableStart="@drawable/ic_mail"
+            android:textColor="@color/secondaryColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textViewName"
+            app:layout_constraintTop_toBottomOf="@+id/textViewName"
+            style="@style/input_text_field_style"
+            android:autofillHints=""
+            tools:ignore="LabelFor" />
 
-    <TextView
-        android:id="@+id/textViewPassword"
-        android:layout_marginTop="24dp"
-        android:text="@string/string_password"
-        style="@style/text_style"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/person_email"
-        app:layout_constraintTop_toBottomOf="@+id/person_email" />
-
-    <EditText
-        android:id="@+id/textPassword"
-        style="@style/input_text_field_style"
-        android:autofillHints=""
-        android:drawableStart="@drawable/ic_lock"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPassword"
-        tools:ignore="LabelFor" />
+        <TextView
+            android:id="@+id/textViewEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/string_password"
+            style="@style/text_style"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextRegisterEmail"
+            app:layout_constraintTop_toBottomOf="@+id/editTextRegisterEmail"
+            tools:ignore="HardcodedText" />
 
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        style="@style/float_button_style"
-        android:layout_marginStart="72dp"
-        android:src="@drawable/ic_google"
-        app:backgroundTint="#1AA9E1"
-        app:fabSize="mini"
-        app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton3"
-        app:layout_constraintStart_toStartOf="@+id/textPassword"
-        app:layout_constraintTop_toBottomOf="@+id/textPassword"
-        app:layout_constraintVertical_bias="0.0"
-        app:tint="@color/white" />
+        <EditText
+            android:id="@+id/editTextRegisterPassword"
+            style="@style/input_text_field_style"
+            android:autofillHints=""
+            android:inputType="textPassword"
+            android:drawableStart="@drawable/ic_lock"
+            app:layout_constraintEnd_toEndOf="@+id/editTextRegisterEmail"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textViewEmail"
+            app:layout_constraintTop_toBottomOf="@+id/textViewEmail"
+            tools:ignore="LabelFor" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton3"
-        style="@style/float_button_style"
-        android:src="@drawable/ic_fb"
-        app:backgroundTint="#3B5A9A"
-        app:fabSize="mini"
-        app:layout_constraintBottom_toTopOf="@+id/btnCreateAccount"
-        app:layout_constraintEnd_toStartOf="@+id/floatingActionButton2"
-        app:layout_constraintHorizontal_bias="0.425"
-        app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
-        app:layout_constraintTop_toBottomOf="@+id/textPassword"
-        app:layout_constraintVertical_bias="0.0"
-        app:tint="@color/white" />
+        <TextView
+            android:id="@+id/textViewPassword"
+            android:layout_marginTop="24dp"
+            android:text="@string/string_password"
+            style="@style/text_style"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextRegisterPassword"
+            app:layout_constraintTop_toBottomOf="@+id/editTextRegisterPassword" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton2"
-        style="@style/float_button_style"
-        android:layout_marginEnd="76dp"
-        android:src="@drawable/ic_twitter"
-        app:backgroundTint="#CB3E2D"
-        app:fabSize="mini"
-        app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton3"
-        app:layout_constraintEnd_toEndOf="@+id/textPassword"
-        app:layout_constraintTop_toBottomOf="@+id/textPassword"
-        app:layout_constraintVertical_bias="1.0"
-        app:tint="@color/white" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnCreateAccount"
-        style="@style/button_style"
-        app:cornerRadius="15dp"
-        android:layout_marginBottom="110dp"
-        android:text="@string/string_create_account"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textPassword"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textPassword"
-        app:layout_constraintTop_toBottomOf="@+id/textPassword"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/btnAccount"
-        android:text="@string/already_have_an_account"
-        app:layout_constraintEnd_toEndOf="@+id/btnCreateAccount"
-        app:layout_constraintHorizontal_bias="0.961"
-        app:layout_constraintStart_toStartOf="@+id/btnCreateAccount"
-        app:layout_constraintTop_toBottomOf="@+id/btnCreateAccount"
-        style="@style/text_button"/>
+        <EditText
+            android:id="@+id/editTextRegisterAgainPassword"
+            style="@style/input_text_field_style"
+            android:autofillHints=""
+            android:drawableStart="@drawable/ic_lock"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPassword"
+            tools:ignore="LabelFor" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            style="@style/float_button_style"
+            android:layout_marginStart="72dp"
+            android:src="@drawable/ic_google"
+            app:backgroundTint="#1AA9E1"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton3"
+            app:layout_constraintStart_toStartOf="@+id/editTextRegisterAgainPassword"
+            app:layout_constraintTop_toBottomOf="@+id/editTextRegisterAgainPassword"
+            app:layout_constraintVertical_bias="0.0"
+            app:tint="@color/white" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton3"
+            style="@style/float_button_style"
+            android:src="@drawable/ic_fb"
+            app:backgroundTint="#3B5A9A"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toTopOf="@+id/btnCreateAccount"
+            app:layout_constraintEnd_toStartOf="@+id/floatingActionButton2"
+            app:layout_constraintHorizontal_bias="0.425"
+            app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
+            app:layout_constraintTop_toBottomOf="@+id/editTextRegisterAgainPassword"
+            app:layout_constraintVertical_bias="0.0"
+            app:tint="@color/white" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton2"
+            style="@style/float_button_style"
+            android:layout_marginEnd="76dp"
+            android:src="@drawable/ic_twitter"
+            app:backgroundTint="#CB3E2D"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton3"
+            app:layout_constraintEnd_toEndOf="@+id/editTextRegisterAgainPassword"
+            app:layout_constraintTop_toBottomOf="@+id/editTextRegisterAgainPassword"
+            app:layout_constraintVertical_bias="1.0"
+            app:tint="@color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCreateAccount"
+            style="@style/button_style"
+            app:cornerRadius="15dp"
+            android:onClick="@{() -> signUpFragmentObject.signUpButton(editTextRegisterEmail.getText().toString(), editTextRegisterPassword.getText().toString(), editTextRegisterAgainPassword.getText().toString())}"
+            android:layout_marginBottom="110dp"
+            android:text="@string/string_create_account"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/editTextRegisterAgainPassword"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextRegisterAgainPassword"
+            app:layout_constraintTop_toBottomOf="@+id/editTextRegisterAgainPassword"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/Tbtn_register_login"
+            android:text="@string/already_have_an_account"
+            app:layout_constraintEnd_toEndOf="@+id/btnCreateAccount"
+            app:layout_constraintHorizontal_bias="0.961"
+            app:layout_constraintStart_toStartOf="@+id/btnCreateAccount"
+            app:layout_constraintTop_toBottomOf="@+id/btnCreateAccount"
+            style="@style/text_button" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

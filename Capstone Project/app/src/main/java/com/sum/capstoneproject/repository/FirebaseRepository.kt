@@ -34,7 +34,7 @@ class FirebaseRepository {
         }
     }
 
-    fun signUp(eMail: String, password: String, nickname: String, phoneNumber: String) {
+    fun signUp(eMail: String, password: String) {
 
         auth.createUserWithEmailAndPassword(eMail, password).addOnCompleteListener { task ->
 
