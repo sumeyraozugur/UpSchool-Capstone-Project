@@ -45,7 +45,7 @@ class LoginFragment : Fragment() {
 
 
         with(viewModel) {
-           // this.currentUser() //should call
+            this.currentUser() //should call
             isCurrentUser.observe(viewLifecycleOwner){
 
                 if(it){
