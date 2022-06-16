@@ -33,6 +33,10 @@
         android:id="@+id/forgotPasswordFragment"
         android:name="com.sum.capstoneproject.ui.forgotpassword.ForgotPasswordFragment"
         android:label="ForgotPasswordFragment"
-        tools:layout="@layout/fragment_forgot_password"/>
+        tools:layout="@layout/fragment_forgot_password">
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_home_navigation"
+            app:destination="@id/home_navigation" />
+    </fragment>
     <include app:graph="@navigation/home_navigation" />
 </navigation>

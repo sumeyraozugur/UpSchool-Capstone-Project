@@ -6,7 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.sum.capstoneproject.repository.FirebaseRepository
 
-class RegisterViewModel:ViewModel() {
+class RegisterViewModel : ViewModel() {
 
     private var usersRepo = FirebaseRepository()
 
@@ -31,30 +31,25 @@ class RegisterViewModel:ViewModel() {
         _isRegister = usersRepo.getIsSignUp()
     }
 
-    fun signUp(
-        eMail: String,
-        password: String,
-        confirmPassword: String,
+    fun signUp(eMail: String, password: String, confirmPassword: String) {
 
-    ) {
-
-        if (eMail.isEmpty() || password.isEmpty() || confirmPassword.isEmpty() ) {
+        if (eMail.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
 
             _isInfosValid.value = false
 
-        }   else {
+        } else {
 
             if (Patterns.EMAIL_ADDRESS.matcher(eMail).matches().not()) {
 
                 _isValidMail.value = false
 
-            }   else {
+            }else {
 
                 if (password != confirmPassword) {
 
                     _isPasswordMatch.value = false
 
-                }   else {
+                }else {
                     usersRepo.signUp(eMail, password)
                 }
             }

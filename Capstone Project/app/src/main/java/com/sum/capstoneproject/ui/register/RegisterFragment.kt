@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.sum.capstoneproject.R
 import com.sum.capstoneproject.databinding.FragmentRegisterBinding
@@ -35,10 +34,8 @@ class RegisterFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-      //  binding.btnAccount.setOnClickListener {
-        //    findNavController().navigate(R.id.action_registerFragment_to_forgotPasswordFragment)
-        //}
-        binding.signUpFragmentObject = this
+
+        binding.signUpFragmentObject = this //For databinding
         initObservers()
 
 

@@ -2,12 +2,16 @@ package com.sum.capstoneproject.repository
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 class FirebaseRepository {
     private var _isLogin = MutableLiveData<Boolean>()
     private var _isRegister = MutableLiveData<Boolean>()
+    private var _isCurrentUser =MutableLiveData<Boolean>()
+    private var _isUpdatePassword =MutableLiveData<Boolean>()
+
     private var auth = Firebase.auth
 
     fun getIsSignIn(): MutableLiveData<Boolean> {
@@ -17,6 +21,34 @@ class FirebaseRepository {
     fun getIsSignUp(): MutableLiveData<Boolean> {
         return _isRegister
     }
+
+    fun getIsCurrenUser():MutableLiveData<Boolean>{
+        return  _isCurrentUser
+    }
+
+    fun getIsUpdatePassword():MutableLiveData<Boolean>{
+        return  _isUpdatePassword
+    }
+
+    fun updatePassword(eMail: String){
+        FirebaseAuth.getInstance().sendPasswordResetEmail(eMail)
+            .addOnCompleteListener { task ->
+                if(task.isSuccessful){
+                    _isUpdatePassword.value =true
+                    Log.d(SIGN_IN_TAG, SUCCESS)
+                    System.out.println("Update Password")
+
+
+                }else{
+                    _isUpdatePassword.value =false
+                    System.out.println("Update Password")
+
+
+                }
+            }
+    }
+
+
 
     fun signIn(eMail: String, password: String) {
 
@@ -39,12 +71,7 @@ class FirebaseRepository {
 
             if (task.isSuccessful) {
 
-                val currentUser = auth.currentUser
-                if (currentUser != null) {
-                    currentUser
-
-
-                }
+                //val currentUser = auth.currentUser
 
                 _isRegister.value = true
                 Log.d(SIGN_UP_TAG, SUCCESS)

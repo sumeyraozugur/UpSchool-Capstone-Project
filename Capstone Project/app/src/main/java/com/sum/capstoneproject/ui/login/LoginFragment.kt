@@ -35,12 +35,14 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.signInFragmentObject = this
+
 
         binding.TbtnLoginForgotPassword.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_forgotPasswordFragment)
         }
         //binding.loFragmentObject = this
-        binding.signInFragmentObject = this
+
 
         with(viewModel) {
 
@@ -53,6 +55,7 @@ class LoginFragment : Fragment() {
                 }
             }
         }
+
         binding.TbtnLoginRegister.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
         }

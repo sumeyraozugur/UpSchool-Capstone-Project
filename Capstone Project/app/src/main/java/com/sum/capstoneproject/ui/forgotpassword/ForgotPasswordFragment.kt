@@ -4,10 +4,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.sum.capstoneproject.R
+import com.sum.capstoneproject.databinding.FragmentForgotPasswordBinding
 
 class ForgotPasswordFragment : Fragment() {
+    private var _binding: FragmentForgotPasswordBinding? = null
+    private val binding get() = _binding!!
+    private val viewModel: ForgotPasswordViewModel by viewModels()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,16 +28,41 @@ class ForgotPasswordFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_forgot_password, container, false)
+        _binding = DataBindingUtil.inflate(inflater, R.layout.fragment_forgot_password, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.forgotFragmentObject = this
+
+
+        with(viewModel) {
+
+
+            isPasswordUpdate.observe(viewLifecycleOwner) {
+                if (it) {
+                    Snackbar.make(view, "Sumeyraaaa", 1000).show()
+                   // findNavController().navigate(R.id.action_forgotPasswordFragment_to_home_navigation)
+
+
+
+                } else {
+                    Snackbar.make(view, R.string.wrong_email_password, 1000).show()
+                }
+            }
+        }
+    }
+
+    fun updatePasswordButton(eMail: String) {
+        System.out.println("Forgot Fragment")
+        viewModel.updatePassword(eMail)
     }
 
 
     override fun onDestroyView() {
         super.onDestroyView()
+        _binding = null
 
     }
 
