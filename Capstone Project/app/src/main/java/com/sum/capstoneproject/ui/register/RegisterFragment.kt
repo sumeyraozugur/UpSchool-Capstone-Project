@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -82,7 +83,8 @@ class RegisterFragment : Fragment() {
                         Snackbar.make(requireView(), R.string.sign_up_snack_text, 1000).show()
                         clearFields()
                     } else {
-                        textViewEmail.error = getString(R.string.registered_mail)
+                        textRegisterEmail.error = getString(R.string.registered_mail)
+                        Toast.makeText(context,"The email address is already in use by another account",Toast.LENGTH_SHORT).show()
                     }
 
                 }

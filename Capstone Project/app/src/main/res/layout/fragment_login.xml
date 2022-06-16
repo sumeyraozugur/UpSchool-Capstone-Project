@@ -19,7 +19,7 @@
             android:id="@+id/textView"
             style="@style/textView_Title"
             android:text="@string/login"
-            app:layout_constraintBottom_toTopOf="@+id/textLoginName"
+            app:layout_constraintBottom_toTopOf="@+id/textLoginEmail"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.512"
             app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +27,7 @@
             app:layout_constraintVertical_bias="0.65" />
 
         <TextView
-            android:id="@+id/textLoginName"
+            android:id="@+id/textLoginEmail"
             style="@style/text_style"
             android:layout_marginStart="24dp"
             android:layout_marginTop="216dp"
@@ -47,12 +47,12 @@
             android:textColor="@color/secondaryColor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/textLoginName"
-            app:layout_constraintTop_toBottomOf="@+id/textLoginName"
+            app:layout_constraintStart_toStartOf="@+id/textLoginEmail"
+            app:layout_constraintTop_toBottomOf="@+id/textLoginEmail"
             tools:ignore="LabelFor" />
 
         <TextView
-            android:id="@+id/textViewPassword"
+            android:id="@+id/textLoginPassword"
             style="@style/text_style"
             android:layout_marginTop="24dp"
             android:text="@string/string_password"
@@ -69,7 +69,7 @@
             android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewPassword"
+            app:layout_constraintTop_toBottomOf="@+id/textLoginPassword"
             tools:ignore="LabelFor" />
 
         <com.google.android.material.button.MaterialButton

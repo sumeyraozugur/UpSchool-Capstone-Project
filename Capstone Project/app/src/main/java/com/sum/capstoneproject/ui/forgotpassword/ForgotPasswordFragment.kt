@@ -55,7 +55,6 @@ class ForgotPasswordFragment : Fragment() {
     }
 
     fun updatePasswordButton(eMail: String) {
-        System.out.println("Forgot Fragment")
         viewModel.updatePassword(eMail)
     }
 

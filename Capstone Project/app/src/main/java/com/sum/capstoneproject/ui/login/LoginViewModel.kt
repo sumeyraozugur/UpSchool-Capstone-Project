@@ -14,12 +14,22 @@ class LoginViewModel : ViewModel() {
     val isSignIn: LiveData<Boolean>
         get() = _isSignIn
 
+    private var _isInfosValid = MutableLiveData<Boolean>()
+    val isInfosValid: LiveData<Boolean>
+        get() = _isInfosValid
+
     init {
         _isSignIn = usersRepo.getIsSignIn()
     }
 
     fun signIn(eMail: String, password: String) {
-        usersRepo.signIn(eMail, password)
+        if (eMail.isEmpty() || password.isEmpty()) {
+
+            _isInfosValid.value = false
+
+        }else {
+            usersRepo.signIn(eMail, password)
+        }
     }
 
 }

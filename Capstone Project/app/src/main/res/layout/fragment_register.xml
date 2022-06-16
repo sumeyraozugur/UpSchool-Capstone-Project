@@ -19,7 +19,7 @@
 
             android:text="REGISTER"
             style="@style/textView_Title"
-            app:layout_constraintBottom_toTopOf="@+id/textViewName"
+            app:layout_constraintBottom_toTopOf="@+id/textRegisterEmail"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +27,7 @@
             app:layout_constraintVertical_bias="0.791" />
 
         <TextView
-            android:id="@+id/textViewName"
+            android:id="@+id/textRegisterEmail"
             style="@style/text_style"
             android:layout_marginStart="24dp"
             android:layout_marginTop="144dp"
@@ -44,14 +44,14 @@
             android:textColor="@color/secondaryColor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/textViewName"
-            app:layout_constraintTop_toBottomOf="@+id/textViewName"
+            app:layout_constraintStart_toStartOf="@+id/textRegisterEmail"
+            app:layout_constraintTop_toBottomOf="@+id/textRegisterEmail"
             style="@style/input_text_field_style"
             android:autofillHints=""
             tools:ignore="LabelFor" />
 
         <TextView
-            android:id="@+id/textViewEmail"
+            android:id="@+id/textRegisterPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
@@ -72,12 +72,12 @@
             android:drawableStart="@drawable/ic_lock"
             app:layout_constraintEnd_toEndOf="@+id/editTextRegisterEmail"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/textViewEmail"
-            app:layout_constraintTop_toBottomOf="@+id/textViewEmail"
+            app:layout_constraintStart_toStartOf="@+id/textRegisterPassword"
+            app:layout_constraintTop_toBottomOf="@+id/textRegisterPassword"
             tools:ignore="LabelFor" />
 
         <TextView
-            android:id="@+id/textViewPassword"
+            android:id="@+id/textRegisterAgainPassword"
             android:layout_marginTop="24dp"
             android:text="@string/string_password"
             style="@style/text_style"
@@ -94,7 +94,7 @@
             android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewPassword"
+            app:layout_constraintTop_toBottomOf="@+id/textRegisterAgainPassword"
             tools:ignore="LabelFor" />
 
 

@@ -44,14 +44,23 @@ class LoginFragment : Fragment() {
         //binding.loFragmentObject = this
 
 
-        with(viewModel) {
+        with(binding) {
+            with(viewModel) {
+                isInfosValid.observe(viewLifecycleOwner) {
 
-            isSignIn.observe(viewLifecycleOwner) {
-                if (it) {
-                    findNavController().navigate(R.id.action_loginFragment_to_home_navigation2)
+                    if (it.not()) Snackbar.make(requireView(),
+                        R.string.incomplete_information_entered,
+                        1000).show()
 
-                } else {
-                    Snackbar.make(view, R.string.wrong_email_password, 1000).show()
+                }
+
+                isSignIn.observe(viewLifecycleOwner) {
+                    if (it) {
+                        findNavController().navigate(R.id.action_loginFragment_to_home_navigation2)
+
+                    } else {
+                        Snackbar.make(view, R.string.wrong_email_password, 1000).show()
+                    }
                 }
             }
         }
@@ -61,6 +70,7 @@ class LoginFragment : Fragment() {
         }
 
     }
+
     fun signInButton(email: String, password: String) {
         viewModel.signIn(email, password)
     }
