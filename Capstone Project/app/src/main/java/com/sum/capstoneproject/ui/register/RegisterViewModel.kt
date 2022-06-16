@@ -27,6 +27,11 @@ class RegisterViewModel : ViewModel() {
     val isSignUp: LiveData<Boolean>
         get() = _isRegister
 
+
+
+
+
+
     init {
         _isRegister = usersRepo.getIsSignUp()
     }
@@ -50,8 +55,10 @@ class RegisterViewModel : ViewModel() {
                     _isPasswordMatch.value = false
 
                 }else {
+
                     usersRepo.signUp(eMail, password)
                 }
+
             }
         }
     }

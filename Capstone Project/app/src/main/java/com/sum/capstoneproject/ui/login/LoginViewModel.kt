@@ -18,6 +18,11 @@ class LoginViewModel : ViewModel() {
     val isInfosValid: LiveData<Boolean>
         get() = _isInfosValid
 
+    private var _isCurrentUser = MutableLiveData<Boolean>()
+    val isCurrentUser: LiveData<Boolean>
+        get() = _isCurrentUser
+
+
     init {
         _isSignIn = usersRepo.getIsSignIn()
     }
@@ -28,8 +33,15 @@ class LoginViewModel : ViewModel() {
             _isInfosValid.value = false
 
         }else {
+
             usersRepo.signIn(eMail, password)
         }
+
     }
+
+   fun currentUser(){
+       usersRepo.currentUser()
+       _isCurrentUser = usersRepo.getCurrentUser()
+   }
 
 }

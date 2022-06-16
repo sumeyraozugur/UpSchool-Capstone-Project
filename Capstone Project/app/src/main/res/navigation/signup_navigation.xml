@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_registerFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_home_navigation"
+            app:destination="@id/home_navigation" />
     </fragment>
     <fragment
         android:id="@+id/forgotPasswordFragment"
@@ -40,6 +43,9 @@
         <action
             android:id="@+id/action_forgotPasswordFragment_to_home_navigation"
             app:destination="@id/home_navigation" />
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
     <include app:graph="@navigation/home_navigation" />
 </navigation>

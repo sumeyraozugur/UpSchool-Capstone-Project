@@ -2,9 +2,12 @@ package com.sum.capstoneproject.repository
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
+import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
+import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import com.sum.capstoneproject.R
 
 class FirebaseRepository {
     private var _isLogin = MutableLiveData<Boolean>()
@@ -21,14 +24,24 @@ class FirebaseRepository {
     fun getIsSignUp(): MutableLiveData<Boolean> {
         return _isRegister
     }
-
-    fun getIsCurrenUser():MutableLiveData<Boolean>{
-        return  _isCurrentUser
-    }
-
     fun getIsUpdatePassword():MutableLiveData<Boolean>{
         return  _isUpdatePassword
     }
+
+    fun getCurrentUser():MutableLiveData<Boolean>{
+        return _isCurrentUser
+    }
+
+    fun currentUser(){
+        val currentUser = auth.currentUser
+        if(currentUser !=null){
+            _isCurrentUser.value = true
+        }
+
+    }
+
+
+
 
     fun updatePassword(eMail: String){
         FirebaseAuth.getInstance().sendPasswordResetEmail(eMail)
@@ -71,8 +84,6 @@ class FirebaseRepository {
 
             if (task.isSuccessful) {
 
-                //val currentUser = auth.currentUser
-
                 _isRegister.value = true
                 Log.d(SIGN_UP_TAG, SUCCESS)
 
@@ -83,6 +94,12 @@ class FirebaseRepository {
 
         }
     }
+
+
+
+
+
+
 
     companion object {
         private const val SIGN_IN_TAG = "Login"

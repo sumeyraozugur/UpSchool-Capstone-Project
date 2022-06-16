@@ -39,7 +39,7 @@
 
         <EditText
             android:id="@+id/editTextRegisterEmail"
-            android:inputType="textPersonName"
+            android:inputType="textEmailAddress"
             android:drawableStart="@drawable/ic_mail"
             android:textColor="@color/secondaryColor"
             app:layout_constraintEnd_toEndOf="parent"

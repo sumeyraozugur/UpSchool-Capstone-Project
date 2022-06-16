@@ -49,8 +49,10 @@ class ForgotPasswordFragment : Fragment() {
 
             isPasswordUpdate.observe(viewLifecycleOwner) {
                 if (it) {
-                    Snackbar.make(view, "Sumeyraaaa", 1000).show()
-                   // findNavController().navigate(R.id.action_forgotPasswordFragment_to_home_navigation)
+
+
+                    Snackbar.make(view, "You should enter new password!!", 1000).show()
+                    findNavController().navigate(R.id.action_forgotPasswordFragment_to_loginFragment)
 
 
 

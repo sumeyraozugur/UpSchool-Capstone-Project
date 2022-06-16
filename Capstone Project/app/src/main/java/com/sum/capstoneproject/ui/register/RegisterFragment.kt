@@ -51,6 +51,7 @@ class RegisterFragment : Fragment() {
 
             with(viewModel) {
 
+
                 isInfosValid.observe(viewLifecycleOwner) {
 
                     if (it.not()) Snackbar.make(requireView(),
