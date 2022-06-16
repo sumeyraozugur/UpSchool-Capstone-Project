@@ -12,12 +12,21 @@ class ForgotPasswordViewModel: ViewModel()  {
     val isPasswordUpdate: LiveData<Boolean>
         get() = _isPasswordUpdate
 
+    private var _isInfosValid = MutableLiveData<Boolean>()
+    val isInfosValid: LiveData<Boolean>
+        get() = _isInfosValid
+
     init {
         _isPasswordUpdate = usersRepo.getIsUpdatePassword()
     }
 
     fun updatePassword(eMail: String) {
-        usersRepo.updatePassword(eMail)
+        if (eMail.isEmpty()) {
+
+            _isInfosValid.value = false
+        }else {
+            usersRepo.updatePassword(eMail)
+        }
     }
 
 }

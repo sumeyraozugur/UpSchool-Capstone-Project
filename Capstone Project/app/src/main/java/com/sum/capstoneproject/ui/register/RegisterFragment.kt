@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.sum.capstoneproject.R
 import com.sum.capstoneproject.databinding.FragmentRegisterBinding
@@ -37,6 +38,9 @@ class RegisterFragment : Fragment() {
 
 
         binding.signUpFragmentObject = this //For databinding
+        binding.TbtnRegisterLogin.setOnClickListener {
+            findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
+        }
         initObservers()
 
 

@@ -38,6 +38,13 @@ class ForgotPasswordFragment : Fragment() {
 
 
         with(viewModel) {
+            isInfosValid.observe(viewLifecycleOwner) {
+
+                if (it.not()) Snackbar.make(requireView(),
+                    R.string.incomplete_information_entered,
+                    1000).show()
+
+            }
 
 
             isPasswordUpdate.observe(viewLifecycleOwner) {
@@ -48,7 +55,7 @@ class ForgotPasswordFragment : Fragment() {
 
 
                 } else {
-                    Snackbar.make(view, R.string.wrong_email_password, 1000).show()
+                    Snackbar.make(view, R.string.wrong_email, 1000).show()
                 }
             }
         }
