@@ -15,6 +15,11 @@
         android:title="Bag"
         android:icon="@drawable/ic_bag"
         />
+    <item
+        android:id="@+id/favoriFragment"
+        android:title="Favorites"
+        android:icon="@drawable/ic_favorite"
+        />
 
 
 </menu>

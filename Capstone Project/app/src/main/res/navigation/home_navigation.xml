@@ -19,4 +19,9 @@
         android:name="com.sum.capstoneproject.BagFragment"
         android:label=" My Bag Page"
         tools:layout="@layout/fragment_bag" />
+    <fragment
+        android:id="@+id/favoriFragment"
+        android:name="com.sum.capstoneproject.FavoriFragment"
+        android:label="Favori Page"
+        tools:layout="@layout/fragment_favori" />
 </navigation>
