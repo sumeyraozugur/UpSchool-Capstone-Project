@@ -9,9 +9,9 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="305dp"
-        android:layout_height="297dp"
-        android:layout_marginTop="88dp"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="36dp"
         android:scaleType="fitXY"
         android:src="@drawable/static_image"
         app:layout_constraintEnd_toEndOf="parent"

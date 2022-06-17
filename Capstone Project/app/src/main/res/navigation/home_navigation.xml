@@ -7,24 +7,16 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.sum.capstoneproject.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_homeFragment_to_shopFragment"
-            app:destination="@id/shopFragment" />
-    </fragment>
+        android:label="Home Page"
+        tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/shopFragment"
         android:name="com.sum.capstoneproject.ShopFragment"
-        android:label="fragment_shop"
-        tools:layout="@layout/fragment_shop" >
-        <action
-            android:id="@+id/action_shopFragment_to_bagFragment"
-            app:destination="@id/bagFragment" />
-    </fragment>
+        android:label="Shop Page"
+        tools:layout="@layout/fragment_shop" />
     <fragment
         android:id="@+id/bagFragment"
         android:name="com.sum.capstoneproject.BagFragment"
-        android:label="fragment_bag"
+        android:label=" My Bag Page"
         tools:layout="@layout/fragment_bag" />
 </navigation>
