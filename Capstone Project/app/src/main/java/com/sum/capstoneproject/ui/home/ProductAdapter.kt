@@ -6,9 +6,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.sum.capstoneproject.databinding.ItemNewProductListBinding
 import com.sum.capstoneproject.model.ProductModel
+import java.util.ArrayList
 
-class ProductRecyclerAdapter(val productList: List<ProductModel>) :
-    RecyclerView.Adapter<ProductRecyclerAdapter.ProductHolder>() {
+
+class ProductAdapter: RecyclerView.Adapter<ProductAdapter.ProductHolder>() {
+    private val productList = ArrayList<ProductModel>()
+
     class ProductHolder(val binding: ItemNewProductListBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
@@ -22,10 +25,12 @@ class ProductRecyclerAdapter(val productList: List<ProductModel>) :
 
     override fun onBindViewHolder(holder: ProductHolder, position: Int) {
         val productImage = holder.binding.itemNewProduct
-        val productName = holder.binding.textHomeProductName
+       // val productName = holder.binding.textHomeProductName
 
 
-        productName.text = productList.get(position).productTitle
+        //productName.text = productList.get(position).productTitle
+        holder.binding.itemNewProductObject = productList[position]
+
 
 
         Glide.with(holder.itemView.context).load(productList.get(position).productImageUrl)
@@ -36,6 +41,12 @@ class ProductRecyclerAdapter(val productList: List<ProductModel>) :
 
     override fun getItemCount(): Int {
         return productList.size
+    }
+
+    fun updateList(list: List<ProductModel>) {
+        productList.clear()
+        productList.addAll(list)
+        notifyDataSetChanged()
     }
 
 }
