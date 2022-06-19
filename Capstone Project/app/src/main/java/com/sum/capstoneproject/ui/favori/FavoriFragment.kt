@@ -1,10 +1,11 @@
-package com.sum.capstoneproject
+package com.sum.capstoneproject.ui.favori
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.sum.capstoneproject.R
 
 
 class FavoriFragment : Fragment() {

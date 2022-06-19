@@ -6,22 +6,22 @@
     app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.sum.capstoneproject.HomeFragment"
+        android:name="com.sum.capstoneproject.ui.home.HomeFragment"
         android:label="Home Page"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/shopFragment"
-        android:name="com.sum.capstoneproject.ShopFragment"
+        android:name="com.sum.capstoneproject.ui.shop.ShopFragment"
         android:label="Shop Page"
         tools:layout="@layout/fragment_shop" />
     <fragment
         android:id="@+id/bagFragment"
-        android:name="com.sum.capstoneproject.BagFragment"
+        android:name="com.sum.capstoneproject.ui.bag.BagFragment"
         android:label=" My Bag Page"
         tools:layout="@layout/fragment_bag" />
     <fragment
         android:id="@+id/favoriFragment"
-        android:name="com.sum.capstoneproject.FavoriFragment"
+        android:name="com.sum.capstoneproject.ui.favori.FavoriFragment"
         android:label="Favori Page"
         tools:layout="@layout/fragment_favori" />
 </navigation>

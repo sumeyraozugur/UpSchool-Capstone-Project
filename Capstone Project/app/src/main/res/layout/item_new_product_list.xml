@@ -26,6 +26,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:id="@+id/itemNewProduct"
                     android:layout_width="0dp"
                     android:layout_height="312dp"
                     android:padding="20dp"
