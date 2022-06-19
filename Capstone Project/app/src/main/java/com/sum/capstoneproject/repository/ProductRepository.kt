@@ -13,12 +13,12 @@ class ProductRepository {
     var productList = MutableLiveData<List<ProductModel>>()
     var isLoading = MutableLiveData<Boolean>()
 
-    private val booksDIF: ProductApi = ApiUtils.getBooksDAOInterface()
+    private val productsDIF: ProductApi = ApiUtils.getProductsDAOInterface()
 
 
-    fun books() {
+    fun products() {
         isLoading.value = true
-        booksDIF.allProduct().enqueue(object : Callback<List<ProductModel>> {
+        productsDIF.allProduct().enqueue(object : Callback<List<ProductModel>> {
             override fun onResponse(
                 call: Call<List<ProductModel>>,
                 response: Response<List<ProductModel>>,

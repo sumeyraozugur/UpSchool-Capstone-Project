@@ -14,7 +14,7 @@ class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
     private val viewModel: HomeViewModel by viewModels()
-    private val allBooksAdapter by lazy { ProductAdapter() }
+    private val allProductsAdapter by lazy { ProductAdapter() }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,7 +56,7 @@ class HomeFragment : Fragment() {
                 productList.observe(viewLifecycleOwner) { list ->
                     homeNewProductRecycle.apply {
                         setHasFixedSize(true)
-                        adapter = allBooksAdapter.also { adapter ->
+                        adapter = allProductsAdapter.also { adapter ->
                             adapter.updateList(list)
                         }
                     }

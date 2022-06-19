@@ -8,7 +8,7 @@ class ApiUtils {
 
     companion object {
         private const val BASE_URL = "https://canerture.com/api/ecommerce/" // https://canerture.com/api/ecommerce/sign_up.php
-        fun getBooksDAOInterface(): ProductApi {
+        fun getProductsDAOInterface(): ProductApi {
             return RetrofitClient.getClient(BASE_URL).create(ProductApi::class.java)
         }
 

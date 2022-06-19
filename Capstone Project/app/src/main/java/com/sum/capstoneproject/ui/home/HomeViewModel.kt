@@ -22,7 +22,7 @@ class HomeViewModel : ViewModel() {
     }
 
     private fun getProduct(){
-        productRepo.books()
+        productRepo.products()
         _productList = productRepo.productList
         _isLoading = productRepo.isLoading
 
