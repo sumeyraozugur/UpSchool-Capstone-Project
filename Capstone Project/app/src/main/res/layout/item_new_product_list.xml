@@ -4,6 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+        <variable
+            name="itemNewProductObject"
+            type="com.sum.capstoneproject.model.ProductModel"
+            />
 
     </data>
 
@@ -28,6 +32,7 @@
                 <ImageView
                     android:id="@+id/itemNewProduct"
                     android:layout_width="0dp"
+                    setImage="@{itemNewProductObject.productImageUrl}"
                     android:layout_height="312dp"
                     android:padding="20dp"
                     android:scaleType="fitCenter"
@@ -58,7 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
-            android:text="TextView"
+            android:text="@{itemNewProductObject.productTitle}"
             app:layout_constraintEnd_toEndOf="@+id/product_card_view"
             app:layout_constraintStart_toStartOf="@+id/product_card_view"
             app:layout_constraintTop_toBottomOf="@+id/product_card_view" />
