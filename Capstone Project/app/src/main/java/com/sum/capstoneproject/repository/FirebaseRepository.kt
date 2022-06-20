@@ -6,7 +6,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-class FirebaseRepository {
+class  FirebaseRepository {
     private var _isLogin = MutableLiveData<Boolean>()
     private var _isRegister = MutableLiveData<Boolean>()
     private var _isCurrentUser = MutableLiveData<Boolean>()
@@ -45,7 +45,7 @@ class FirebaseRepository {
                 if (task.isSuccessful) {
                     _isUpdatePassword.value = true
                     Log.d(SIGN_IN_TAG, SUCCESS)
-                    System.out.println("Update Password")
+
 
 
                 } else {

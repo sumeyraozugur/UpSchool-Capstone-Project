@@ -8,7 +8,11 @@
         android:id="@+id/homeFragment"
         android:name="com.sum.capstoneproject.ui.home.HomeFragment"
         android:label="Home Page"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/shopFragment"
         android:name="com.sum.capstoneproject.ui.shop.ShopFragment"
@@ -24,4 +28,15 @@
         android:name="com.sum.capstoneproject.ui.favori.FavoriFragment"
         android:label="Favori Page"
         tools:layout="@layout/fragment_favori" />
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.sum.capstoneproject.ui.productdetail.ProductDetailFragment"
+        android:label="Detail Page"
+        tools:layout="@layout/fragment_product_detail">
+
+
+        <argument
+            android:name="objectProduct"
+            app:argType="com.sum.capstoneproject.model.ProductModel" />
+    </fragment>
 </navigation>

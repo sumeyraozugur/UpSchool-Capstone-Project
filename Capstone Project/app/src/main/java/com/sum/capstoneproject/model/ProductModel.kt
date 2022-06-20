@@ -1,25 +1,28 @@
 package com.sum.capstoneproject.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class ProductModel(
     @SerializedName("id")
     var productId: Int? = 0,
 
     @SerializedName("user")
-    var productUser:String?,
+    var productUser: String?,
 
     @SerializedName("title")
-    var productTitle:String?,
+    var productTitle: String?,
 
     @SerializedName("price")
     var productPrice: String?,
 
     @SerializedName("description")
-    var productDescription:String?,
+    var productDescription: String?,
 
     @SerializedName("category")
-    var productCategory:String?,
+    var productCategory: String?,
 
     @SerializedName("image")
     var productImageUrl: String?,
@@ -28,8 +31,7 @@ data class ProductModel(
     var productRate: String?,
 
     @SerializedName("count")
-    var productCount:String?
+    var productCount: String?,
 
 
-
-)
+    ) : Parcelable

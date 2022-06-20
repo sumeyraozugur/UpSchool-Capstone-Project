@@ -2,11 +2,11 @@ package com.sum.capstoneproject.ui.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.sum.capstoneproject.databinding.ItemNewProductListBinding
 import com.sum.capstoneproject.model.ProductModel
-import java.util.ArrayList
 
 
 class ProductAdapter: RecyclerView.Adapter<ProductAdapter.ProductHolder>() {
@@ -32,9 +32,15 @@ class ProductAdapter: RecyclerView.Adapter<ProductAdapter.ProductHolder>() {
         holder.binding.itemNewProductObject = productList[position]
 
 
-
-        Glide.with(holder.itemView.context).load(productList.get(position).productImageUrl)
+        Glide.with(holder.itemView.context).load(productList[position].productImageUrl)
             .into(productImage)
+
+        holder.binding.itemNewProduct.setOnClickListener {
+            val action = HomeFragmentDirections.actionHomeFragmentToProductDetailFragment(
+                productList[position])
+            Navigation.findNavController(it).navigate(action)
+
+        }
 
 
     }

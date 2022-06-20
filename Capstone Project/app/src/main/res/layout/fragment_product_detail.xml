@@ -4,9 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable
+            name="detailFragmentObject"
+            type="com.sum.capstoneproject.model.ProductModel"
+            />
 
     </data>
 
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -18,9 +25,9 @@
         <androidx.cardview.widget.CardView
 
             android:id="@+id/cardViewİmageDetail"
-            android:layout_width="300dp"
-            android:layout_height="360dp"
-            android:layout_marginTop="36dp"
+            android:layout_width="250dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="20dp"
             android:background="@color/white"
             android:backgroundTint="@color/white"
             android:elevation="10dp"
@@ -44,24 +51,25 @@
             android:id="@+id/textViewDetailName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="4dp"
             android:gravity="center"
-            android:text="Sumeyra"
+            android:text="@{detailFragmentObject.productTitle}"
             android:textSize="24sp"
             android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardViewİmageDetail" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
         <TextView
             android:id="@+id/textViewDetailInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="20dp"
             android:gravity="center"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
-            android:text="urun_aciklama"
+            android:text="@{detailFragmentObject.productDescription}"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -71,15 +79,17 @@
             android:id="@+id/textViewDetailPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="44dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginBottom="10dp"
             android:gravity="center"
-            android:text='15.99tl'
+            android:text='@{detailFragmentObject.productCount + " TL"}'
+            android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/textViewDetailName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textViewDetailName"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDetailInfo"
+            app:layout_constraintVertical_bias="0.936" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonAddToBasket"
@@ -87,26 +97,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="44dp"
-            app:cornerRadius="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="60dp"
             android:text="Add to Basket"
             android:textColor="@color/black"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.761"
+            app:layout_constraintStart_toEndOf="@+id/textViewDetailPrice"
             app:layout_constraintTop_toBottomOf="@+id/textViewDetailInfo">
 
         </com.google.android.material.button.MaterialButton>
 
         <ImageView
             android:id="@+id/imageView5"
-            android:layout_width="64dp"
-            android:layout_height="42dp"
+            android:layout_width="34dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="14dp"
             android:src="@drawable/ic_favorite_border"
-            app:layout_constraintBottom_toTopOf="@+id/textViewDetailPrice"
             app:layout_constraintEnd_toEndOf="@+id/cardViewİmageDetail"
             app:layout_constraintTop_toBottomOf="@+id/cardViewİmageDetail" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
 
 </layout>
