@@ -26,8 +26,8 @@
 
             android:id="@+id/cardViewİmageDetail"
             android:layout_width="250dp"
-            android:layout_height="300dp"
-            android:layout_marginTop="20dp"
+            android:layout_height="280dp"
+            android:layout_marginTop="36dp"
             android:background="@color/white"
             android:backgroundTint="@color/white"
             android:elevation="10dp"
@@ -38,8 +38,9 @@
 
             <ImageView
                 android:id="@+id/imageViewDetail"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="200dp"
+                android:layout_height="240dp"
+                android:layout_gravity="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -80,16 +81,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"
-            android:layout_marginBottom="10dp"
             android:gravity="center"
             android:text='@{detailFragmentObject.productCount + " TL"}'
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonAddToBasket"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewDetailInfo"
-            app:layout_constraintVertical_bias="0.936" />
+            app:layout_constraintTop_toTopOf="@+id/buttonAddToBasket"
+            app:layout_constraintVertical_bias="0.111" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonAddToBasket"
@@ -97,8 +97,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="44dp"
-            android:layout_marginBottom="10dp"
             android:layout_marginEnd="60dp"
+            android:layout_marginBottom="10dp"
             android:text="Add to Basket"
             android:textColor="@color/black"
             app:cornerRadius="20dp"

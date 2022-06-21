@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
+import com.bumptech.glide.Glide
 import com.sum.capstoneproject.R
 import com.sum.capstoneproject.databinding.FragmentProductDetailBinding
 import com.sum.capstoneproject.model.ProductModel
@@ -52,8 +53,13 @@ class ProductDetailFragment : Fragment() {
 
             detailFragmentObject = product
 
-
         }
+//Detaya görseli getirme
+        Glide.with(this).load(product.productImageUrl)
+            .into(binding.imageViewDetail)
+
+
+
     }
 
 }
