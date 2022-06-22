@@ -1,5 +1,6 @@
 package com.sum.capstoneproject.repository
 
+import android.content.Context
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import com.sum.capstoneproject.model.ProductModel
@@ -9,7 +10,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class ProductRepository {
+class ProductRepository() {
     var productList = MutableLiveData<List<ProductModel>>()
     var categoryList = MutableLiveData<List<String>>()
     var isLoading = MutableLiveData<Boolean>()
@@ -55,6 +56,7 @@ class ProductRepository {
 
                     response.body()?.let {
                         categoryList.value = it
+                        System.out.println(it)
                         isLoading.value = false
                     } ?: run {
                         isLoading.value = false

@@ -29,7 +29,7 @@ class ShopAdapter : RecyclerView.Adapter<ShopAdapter.ShopHolder>(), Filterable {
 
     override fun onBindViewHolder(holder: ShopHolder, position: Int) {
         val productCategory = holder.binding.itemTextCategory
-        //holder.binding.itemCategoryObject = categoryList[position]
+        holder.binding.itemCategoryObject = categoryList[position]
 
     }
 

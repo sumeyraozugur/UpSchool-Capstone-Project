@@ -53,6 +53,7 @@ class ShopFragment : Fragment() {
                     shopRecycleView.apply {
                         setHasFixedSize(true)
                         adapter = categoryProductsAdapter.also { adapter ->
+                            System.out.println(list)
                             adapter.updateList(list)
                         }
                     }

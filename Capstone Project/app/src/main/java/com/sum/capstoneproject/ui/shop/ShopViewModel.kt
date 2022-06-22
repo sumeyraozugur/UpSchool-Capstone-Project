@@ -22,6 +22,7 @@ class ShopViewModel : ViewModel() {
 
     private fun getCategory() {
         shopRepo.category()
+        System.out.println(shopRepo.categoryList)
         _categoryList = shopRepo.categoryList
         _isLoading = shopRepo.isLoading
 

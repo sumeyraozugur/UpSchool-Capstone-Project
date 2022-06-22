@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
 
         val bottomNav = binding.bottomNavigationView
 
-
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.fragment) as NavHostFragment
         val navController: NavController = navHostFragment.navController

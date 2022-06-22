@@ -5,7 +5,7 @@
     <data>
         <variable
             name="itemCategoryObject"
-            type="com.sum.capstoneproject.model.ProductModel"
+            type="java.lang.String"
             />
 
     </data>
@@ -35,7 +35,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="@{itemCategoryObject.productCategory}"
+                        android:text="@{itemCategoryObject}"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
