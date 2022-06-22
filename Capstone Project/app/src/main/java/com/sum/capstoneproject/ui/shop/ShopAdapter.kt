@@ -24,11 +24,11 @@ class ShopAdapter : RecyclerView.Adapter<ShopAdapter.ShopHolder>(), Filterable {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShopHolder {
         val binding =
             ItemListShopBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return ShopAdapter.ShopHolder(binding)
+        return ShopHolder(binding)
     }
 
     override fun onBindViewHolder(holder: ShopHolder, position: Int) {
-        val productCategory = holder.binding.itemTextCategory
+       // val productCategory = holder.binding.itemTextCategory
         holder.binding.itemCategoryObject = categoryList[position]
 
     }

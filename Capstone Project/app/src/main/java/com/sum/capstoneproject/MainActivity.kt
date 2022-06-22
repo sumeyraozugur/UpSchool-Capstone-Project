@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                   R.id.loginFragment,
                   R.id.shopFragment,
                   R.id.bagFragment,
-                  R.id.favoriFragment) // bu kısımda hangi sayfalarda görünmesini istemiyorum kısmı
+                  R.id.favoriFragment)  // bu kısımda hangi sayfalarda görünmesini istemiyorum kısmı
         )
         binding.toolbar.setupWithNavController(
             navController,

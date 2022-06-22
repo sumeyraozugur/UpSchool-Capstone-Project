@@ -12,19 +12,24 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="100dp">
 
         <LinearLayout
-            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="30dp"
+            android:id="@+id/linearLayout"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
             android:orientation="vertical"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:gravity="center"
+                android:background="@color/white"
+                app:cardCornerRadius="15dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -36,6 +41,8 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@{itemCategoryObject}"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />

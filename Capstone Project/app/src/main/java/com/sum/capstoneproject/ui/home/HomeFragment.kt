@@ -36,9 +36,6 @@ class HomeFragment : Fragment() {
 
         initObservers()
 
-
-
-
     }
 
     private fun initObservers() {
@@ -50,7 +47,6 @@ class HomeFragment : Fragment() {
                 isLoading.observe(viewLifecycleOwner) {
                     //if (!it) productLoadingView.visibility = View.GONE
                 }
-
 
 
                 productList.observe(viewLifecycleOwner) { list ->
