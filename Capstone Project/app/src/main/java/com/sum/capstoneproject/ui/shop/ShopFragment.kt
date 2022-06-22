@@ -1,9 +1,9 @@
 package com.sum.capstoneproject.ui.shop
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.util.Log
+import android.view.*
+import androidx.appcompat.widget.SearchView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -35,6 +35,7 @@ class ShopFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initObservers()
+        setHasOptionsMenu(true)
     }
 
     private fun initObservers() {
@@ -63,5 +64,17 @@ class ShopFragment : Fragment() {
             }
         }
     }
+
+    override fun onCreateOptionsMenu(menu: Menu,menuInflater: MenuInflater){
+        menuInflater.inflate(R.menu.search_menu,menu)
+
+        //val item = menu.findItem(R.id.ic_search)
+        //val searchView = item.actionView as SearchView
+        //searchView.setOnQueryTextListener(this)
+
+
+    }
+
+
 
 }

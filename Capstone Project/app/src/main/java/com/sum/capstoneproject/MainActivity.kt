@@ -1,9 +1,11 @@
 package com.sum.capstoneproject
 
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -22,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val bottomNav = binding.bottomNavigationView
+        setSupportActionBar(binding.toolbar)//Toolbar
 
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.fragment) as NavHostFragment
@@ -32,14 +35,14 @@ class MainActivity : AppCompatActivity() {
 
         val appBarConfiguration = AppBarConfiguration(
             setOf(R.id.homeFragment,
-                R.id.loginFragment,
-            R.id.shopFragment) // bu kısımda hangi sayfalarda görünmesini istemiyorum kısmı
+                  R.id.loginFragment,
+                  R.id.shopFragment,
+                  R.id.bagFragment,
+                  R.id.favoriFragment) // bu kısımda hangi sayfalarda görünmesini istemiyorum kısmı
         )
         binding.toolbar.setupWithNavController(
             navController,
-            appBarConfiguration
-        )
-
+            appBarConfiguration)
 
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
@@ -56,8 +59,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-
-
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -66,12 +67,7 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
-  /*  override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        return super.onCreateOptionsMenu(menu)
-        menuInflater.inflate(R.menu.search_menu,menu)
 
-       // val searchItem = menu.findItem(R.id.shopFragment)
-    }*/
 
 
 }

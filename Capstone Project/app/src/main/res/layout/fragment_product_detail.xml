@@ -27,7 +27,7 @@
             android:id="@+id/cardViewİmageDetail"
             android:layout_width="250dp"
             android:layout_height="280dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="16dp"
             android:background="@color/white"
             android:backgroundTint="@color/white"
             android:elevation="10dp"
