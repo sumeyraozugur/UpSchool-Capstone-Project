@@ -11,6 +11,7 @@ import retrofit2.Response
 
 class ProductRepository {
     var productList = MutableLiveData<List<ProductModel>>()
+    var categoryList = MutableLiveData<List<String>>()
     var isLoading = MutableLiveData<Boolean>()
 
     private val productsDIF: ProductApi = ApiUtils.getProductsDAOInterface()
@@ -41,4 +42,36 @@ class ProductRepository {
 
         })
     }
+
+    fun category(){
+        isLoading.value = true
+
+        with(productsDIF) {
+            getCategories().enqueue(object : Callback<List<String>> {
+                override fun onResponse(
+                    call: Call<List<String>>,
+                    response: Response<List<String>>,
+                ) {
+
+                    response.body()?.let {
+                        categoryList.value = it
+                        isLoading.value = false
+                    } ?: run {
+                        isLoading.value = false
+                    }
+
+                }
+
+                override fun onFailure(call: Call<List<String>>, t: Throwable) {
+                    t.localizedMessage?.toString()?.let { Log.e("Books Failure", it) }
+                    isLoading.value = false
+                }
+
+
+            })
+        }
+
+    }
+
+
 }

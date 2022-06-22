@@ -14,5 +14,8 @@ interface ProductApi {
     @GET("get_sale_products.php")
     fun bestSellers(): Call<List<ProductModel>>
 
+    @GET("get_categories.php")
+    fun getCategories(): Call<List<String>>
+
 
 }

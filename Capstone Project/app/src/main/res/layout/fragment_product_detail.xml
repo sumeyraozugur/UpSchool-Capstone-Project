@@ -110,12 +110,12 @@
 
         </com.google.android.material.button.MaterialButton>
 
-        <ImageView
+        <CheckBox
             android:id="@+id/imageView5"
             android:layout_width="34dp"
             android:layout_height="32dp"
             android:layout_marginTop="14dp"
-            android:src="@drawable/ic_favorite_border"
+            android:button="@drawable/whistlist_item"
             app:layout_constraintEnd_toEndOf="@+id/cardViewİmageDetail"
             app:layout_constraintTop_toBottomOf="@+id/cardViewİmageDetail" />
 
