@@ -12,7 +12,6 @@
         <action
             android:id="@+id/action_homeFragment_to_productDetailFragment"
             app:destination="@id/productDetailFragment" />
-
     </fragment>
     <fragment
         android:id="@+id/shopFragment"
@@ -38,6 +37,6 @@
 
         <argument
             android:name="objectProduct"
-            app:argType="com.sum.capstoneproject.model.PoductModel" />
+            app:argType="com.sum.capstoneproject.model.ProductModel" />
     </fragment>
 </navigation>

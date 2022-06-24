@@ -6,7 +6,7 @@
     <data>
         <variable
             name="detailFragmentObject"
-            type="com.sum.capstoneproject.model.FavModel"
+            type="com.sum.capstoneproject.model.ProductModel"
             />
 
     </data>
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:gravity="center"
-            android:text="@{detailFragmentObject.favTitle}"
+            android:text="@{detailFragmentObject.productTitle}"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -70,7 +70,7 @@
             android:gravity="center"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
-            android:text="@{detailFragmentObject.favDescription}"
+            android:text="@{detailFragmentObject.productDescription}"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -82,7 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"
             android:gravity="center"
-            android:text='@{detailFragmentObject.favPrice + " TL"}'
+            android:text='@{detailFragmentObject.productCount + " TL"}'
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold"

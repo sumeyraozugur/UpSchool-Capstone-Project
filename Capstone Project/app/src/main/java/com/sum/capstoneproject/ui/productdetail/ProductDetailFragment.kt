@@ -55,15 +55,15 @@ class ProductDetailFragment : Fragment() {
 
         }
 //Detaya görseli getirme
-        Glide.with(this).load(product.favImageUrl)
+       Glide.with(this).load(product.productImageUrl)
             .into(binding.imageViewDetail)
-
+/*
         binding.btnDetailAddFav.setOnClickListener {
             viewModel.addFav(FavoriteRoomModel(favName = product.favTitle,
                                                favPrice = product.favPrice,
                                                favImageUrl = product.favImageUrl))
 
-        }
+        }*/
 
 
     }
