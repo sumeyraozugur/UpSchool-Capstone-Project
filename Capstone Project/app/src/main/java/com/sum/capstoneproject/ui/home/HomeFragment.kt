@@ -13,7 +13,8 @@ import com.sum.capstoneproject.databinding.FragmentHomeBinding
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
-    private val viewModel: HomeViewModel by viewModels()
+    //private val viewModel: HomeViewModel by viewModels()
+    private val viewModel by lazy {HomeViewModel(requireContext())}
     private val allProductsAdapter by lazy { ProductAdapter() }
 
 

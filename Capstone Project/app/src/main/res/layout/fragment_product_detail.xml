@@ -60,7 +60,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+            app:layout_constraintTop_toBottomOf="@+id/btnDetailAddFav" />
 
         <TextView
             android:id="@+id/textViewDetailInfo"
@@ -111,7 +111,7 @@
         </com.google.android.material.button.MaterialButton>
 
         <CheckBox
-            android:id="@+id/imageView5"
+            android:id="@+id/btnDetailAddFav"
             android:layout_width="34dp"
             android:layout_height="32dp"
             android:layout_marginTop="14dp"

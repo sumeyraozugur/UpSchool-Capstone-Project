@@ -1,12 +1,9 @@
 package com.sum.capstoneproject.ui.shop
 
 import android.os.Bundle
-import android.util.Log
 import android.view.*
-import androidx.appcompat.widget.SearchView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import com.sum.capstoneproject.R
 import com.sum.capstoneproject.databinding.FragmentShopBinding
 
@@ -14,7 +11,9 @@ import com.sum.capstoneproject.databinding.FragmentShopBinding
 class ShopFragment : Fragment() {
     private var _binding: FragmentShopBinding? = null
     private val binding get() = _binding!!
-    private val viewModel: ShopViewModel by viewModels()
+
+
+    private val viewModel by lazy { ShopViewModel(requireContext()) }
     private val categoryProductsAdapter by lazy { ShopAdapter() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -65,8 +64,8 @@ class ShopFragment : Fragment() {
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu,menuInflater: MenuInflater){
-        menuInflater.inflate(R.menu.search_menu,menu)
+    override fun onCreateOptionsMenu(menu: Menu, menuInflater: MenuInflater) {
+        menuInflater.inflate(R.menu.search_menu, menu)
 
         //val item = menu.findItem(R.id.ic_search)
         //val searchView = item.actionView as SearchView
@@ -74,7 +73,6 @@ class ShopFragment : Fragment() {
 
 
     }
-
 
 
 }

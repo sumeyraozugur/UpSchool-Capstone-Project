@@ -23,5 +23,6 @@
     <string name="password_match_error">Passwords do not match</string>
     <string name="sign_up_snack_text">Registration successfully created</string>
     <string name="registered_mail">E-mail address already registered!</string>
+    <string name="fav_image_description">fav_image_description</string>
 
 </resources>

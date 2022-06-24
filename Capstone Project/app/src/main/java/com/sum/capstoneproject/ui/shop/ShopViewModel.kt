@@ -1,12 +1,13 @@
 package com.sum.capstoneproject.ui.shop
 
+import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.sum.capstoneproject.repository.ProductRepository
 
-class ShopViewModel : ViewModel() {
-    private var shopRepo = ProductRepository()
+class ShopViewModel(contex:Context) : ViewModel() {
+    private var shopRepo = ProductRepository(contex)
 
     private var _categoryList = MutableLiveData<List<String>>()
     val categoryList: LiveData<List<String>>
