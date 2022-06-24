@@ -53,7 +53,7 @@
                     android:layout_gravity="center"
                     android:layout_marginBottom="8dp"
                     android:gravity="center"
-                    android:text=""
+                    android:text="@{itemFavObject.favName}"
                     android:textAlignment="center"
                     android:textAllCaps="false"
                     android:textSize="18sp"
@@ -66,7 +66,7 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="8dp"
                     android:gravity="center"
-                    android:text=''
+                    android:text='@{itemFavObject.favPrice +" TL"}'
                     android:textAlignment="center"
                     android:textAllCaps="false"
                     android:textSize="18sp" />

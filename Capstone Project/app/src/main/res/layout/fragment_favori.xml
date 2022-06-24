@@ -5,6 +5,10 @@
 
     <data>
 
+        <variable
+            name="booksBasketRecyclerAdapter"
+            type="com.sum.capstoneproject.ui.favori.FavoriAdapter" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -49,21 +49,24 @@ class ProductDetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val product = args.objectProduct
 
+
         binding.apply {
 
             detailFragmentObject = product
+
+
 
         }
 //Detaya görseli getirme
        Glide.with(this).load(product.productImageUrl)
             .into(binding.imageViewDetail)
-/*
-        binding.btnDetailAddFav.setOnClickListener {
-            viewModel.addFav(FavoriteRoomModel(favName = product.favTitle,
-                                               favPrice = product.favPrice,
-                                               favImageUrl = product.favImageUrl))
 
-        }*/
+      binding.btnDetailAddFav.setOnClickListener {
+            viewModel.addFav(FavoriteRoomModel(favName = product.productTitle,
+                                               favPrice = product.productPrice,
+                                               favImageUrl = product.productImageUrl))
+
+        }
 
 
     }

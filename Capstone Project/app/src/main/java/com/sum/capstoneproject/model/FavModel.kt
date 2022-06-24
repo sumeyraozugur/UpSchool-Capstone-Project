@@ -15,12 +15,14 @@ class FavModel (
     @SerializedName("fav_title") @Expose
     var favTitle: String?,
 
-
     @SerializedName("fav_description") @Expose
     var favDescription: String?,
 
     @SerializedName("fav_price") @Expose
     var favPrice: String?,
+
+   // @SerializedName("fav_user") @Expose
+    //var favUser: String?,
 
     @SerializedName("fav_image_url") @Expose
     var favImageUrl: String?) : Parcelable

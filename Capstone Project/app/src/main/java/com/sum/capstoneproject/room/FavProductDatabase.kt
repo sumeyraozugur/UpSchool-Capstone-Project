@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.sum.capstoneproject.model.FavoriteRoomModel
 
-@Database(entities = [FavoriteRoomModel::class], version = 1)
+@Database(entities = [FavoriteRoomModel::class], version = 2)
 abstract class FavProductDatabase : RoomDatabase() {
 
     abstract fun favProductDAOInterface(): FavProductDao

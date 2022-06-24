@@ -87,6 +87,7 @@ class ProductRepository(context: Context) {
 
         favProductDao?.getFavProduct()?.let {
             productFavList.value = it
+            System.out.println(it)
             isLoading.value = false
         } ?: run {
             isLoading.value = false
