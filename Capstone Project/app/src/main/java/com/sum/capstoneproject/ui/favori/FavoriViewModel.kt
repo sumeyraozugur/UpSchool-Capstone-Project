@@ -1,7 +1,6 @@
 package com.sum.capstoneproject.ui.favori
 
 import android.content.Context
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -9,7 +8,7 @@ import com.sum.capstoneproject.model.FavoriteRoomModel
 import com.sum.capstoneproject.repository.ProductRepository
 
 class FavoriViewModel(contex: Context) : ViewModel() {
-    private val booksRepo = ProductRepository(contex)
+    private val productRepo = ProductRepository(contex)
 
     private var _booksBasket = MutableLiveData<List<FavoriteRoomModel>>()
     val booksBasket: LiveData<List<FavoriteRoomModel>>
@@ -20,13 +19,18 @@ class FavoriViewModel(contex: Context) : ViewModel() {
         get() = _isLoading
 
     init {
-        getBooksBasket()
+        getFavori()
     }
 
-    private fun getBooksBasket() {
-        booksRepo.fav()
-        _booksBasket = booksRepo.productFavList
-        _isLoading = booksRepo.isLoading
+    private fun getFavori() {
+        productRepo.fav()
+        _booksBasket = productRepo.productFavList
+        _isLoading = productRepo.isLoading
+    }
+
+    fun deleteFavFrom(bookId: Int) {
+        productRepo.deleteBookFromBasket(bookId)
+        getFavori()
     }
 
 }

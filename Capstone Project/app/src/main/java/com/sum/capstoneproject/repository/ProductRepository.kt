@@ -109,4 +109,12 @@ class ProductRepository(context: Context) {
 
 
 
+    fun deleteBookFromBasket(favId: Int) {
+        favProductDao?.deleteFavWithId(favId)
+    }
+
+
+
+
+
 }

@@ -28,9 +28,7 @@
         android:name="com.sum.capstoneproject.ui.favori.FavoriFragment"
         android:label="Favori Page"
         tools:layout="@layout/fragment_favori" >
-        <argument
-            android:name="objectFavori"
-            app:argType="com.sum.capstoneproject.model.FavModel" />
+
     </fragment>
     <fragment
         android:id="@+id/productDetailFragment"

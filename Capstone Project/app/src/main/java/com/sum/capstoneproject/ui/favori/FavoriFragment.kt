@@ -7,10 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.google.android.material.snackbar.Snackbar
 import com.sum.capstoneproject.R
 import com.sum.capstoneproject.databinding.FragmentFavoriBinding
-import com.sum.capstoneproject.ui.home.HomeViewModel
-import com.sum.capstoneproject.ui.home.ProductAdapter
 
 
 class FavoriFragment : Fragment() {
@@ -42,6 +41,9 @@ class FavoriFragment : Fragment() {
         with(binding) {
 
             favRecycleView.setHasFixedSize(true)
+            allProductsAdapter.onRemoveFavClick = {
+                viewModel.deleteFavFrom(it)
+            }
 
 
         }
@@ -63,7 +65,7 @@ class FavoriFragment : Fragment() {
                     allProductsAdapter.updateList(list)
                     booksBasketRecyclerAdapter = allProductsAdapter
                     favRecycleView.adapter =allProductsAdapter
-                    Log.e("FavoriList",list.toString())
+                   // Log.e("FavoriList",list.toString())
 
                  /*   if (list.isNotEmpty()) {
                         goToPayButton.setOnClickListener {

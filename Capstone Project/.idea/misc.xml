@@ -19,6 +19,7 @@
         <entry key="..\:/Users/User/Desktop/UpSchool-Capstone-Project/Capstone Project/app/src/main/res/drawable/ic_shop.xml" value="0.2115" />
         <entry key="..\:/Users/User/Desktop/UpSchool-Capstone-Project/Capstone Project/app/src/main/res/drawable/ic_static_image.xml" value="0.2445" />
         <entry key="..\:/Users/User/Desktop/UpSchool-Capstone-Project/Capstone Project/app/src/main/res/drawable/ic_twitter.xml" value="0.149" />
+        <entry key="..\:/Users/User/Desktop/UpSchool-Capstone-Project/Capstone Project/app/src/main/res/drawable/remove_fav_list.xml" value="0.143" />
         <entry key="..\:/Users/User/Desktop/UpSchool-Capstone-Project/Capstone Project/app/src/main/res/drawable/text_field_shape.xml" value="0.149" />
         <entry key="..\:/Users/User/Desktop/UpSchool-Capstone-Project/Capstone Project/app/src/main/res/drawable/whistlist_item.xml" value="0.2115" />
         <entry key="..\:/Users/User/Desktop/UpSchool-Capstone-Project/Capstone Project/app/src/main/res/font/font.xml" value="0.2140625" />
@@ -33,11 +34,13 @@
         <entry key="..\:/Users/User/Desktop/UpSchool-Capstone-Project/Capstone Project/app/src/main/res/layout/fragment_register.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/User/Desktop/UpSchool-Capstone-Project/Capstone Project/app/src/main/res/layout/fragment_shop.xml" value="0.215625" />
         <entry key="..\:/Users/User/Desktop/UpSchool-Capstone-Project/Capstone Project/app/src/main/res/layout/fragment_success.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/User/Desktop/UpSchool-Capstone-Project/Capstone Project/app/src/main/res/layout/item_bag_list.xml" value="0.17864583333333334" />
         <entry key="..\:/Users/User/Desktop/UpSchool-Capstone-Project/Capstone Project/app/src/main/res/layout/item_fav_list.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/User/Desktop/UpSchool-Capstone-Project/Capstone Project/app/src/main/res/layout/item_list_shop.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/User/Desktop/UpSchool-Capstone-Project/Capstone Project/app/src/main/res/layout/item_new_product_list.xml" value="0.264" />
         <entry key="..\:/Users/User/Desktop/UpSchool-Capstone-Project/Capstone Project/app/src/main/res/layout/item_product_detail_page.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/User/Desktop/UpSchool-Capstone-Project/Capstone Project/app/src/main/res/layout/layout_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/Desktop/UpSchool-Capstone-Project/Capstone Project/app/src/main/res/layout/remove_fav_item.xml" value="0.171875" />
         <entry key="..\:/Users/User/Desktop/UpSchool-Capstone-Project/Capstone Project/app/src/main/res/layout/toolbar.xml" value="0.264" />
         <entry key="..\:/Users/User/Desktop/UpSchool-Capstone-Project/Capstone Project/app/src/main/res/menu/bottom_menu.xml" value="0.23854166666666668" />
         <entry key="..\:/Users/User/Desktop/UpSchool-Capstone-Project/Capstone Project/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.23854166666666668" />

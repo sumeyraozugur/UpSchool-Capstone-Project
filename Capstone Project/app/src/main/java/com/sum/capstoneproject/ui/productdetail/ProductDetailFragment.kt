@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
+import com.google.android.material.snackbar.Snackbar
 import com.sum.capstoneproject.R
 import com.sum.capstoneproject.databinding.FragmentProductDetailBinding
 import com.sum.capstoneproject.model.FavoriteRoomModel
@@ -65,6 +66,7 @@ class ProductDetailFragment : Fragment() {
             viewModel.addFav(FavoriteRoomModel(favName = product.productTitle,
                                                favPrice = product.productPrice,
                                                favImageUrl = product.productImageUrl))
+          view?.let { Snackbar.make(it, R.string.this_product_added_fav, 1000).show() }
 
         }
 
