@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import com.sum.capstoneproject.model.FavoriteRoomModel
 import com.sum.capstoneproject.model.ProductModel
+import com.sum.capstoneproject.response.CRUDResponse
 import com.sum.capstoneproject.retrofit.ProductApi
 import com.sum.capstoneproject.room.FavProductDao
 import com.sum.capstoneproject.room.FavProductDatabase
@@ -15,6 +16,7 @@ import retrofit2.Response
 
 class ProductRepository(context: Context) {
     var productList = MutableLiveData<List<ProductModel>>()
+    var basketList = MutableLiveData<List<ProductModel>>()
     var categoryList = MutableLiveData<List<String>>()
     var productFavList = MutableLiveData<List<FavoriteRoomModel>>()
     var isLoading = MutableLiveData<Boolean>()
@@ -109,12 +111,64 @@ class ProductRepository(context: Context) {
 
 
 
-    fun deleteBookFromBasket(favId: Int) {
+    fun deleteProductsFromFav(favId: Int) {
         favProductDao?.deleteFavWithId(favId)
     }
 
 
+    fun addToBag(user:String,title:String,description:String,category:String,image:String,price:Double,rate:Double,count:Int,sale_state:Int){
+        productsDIF.addToBag(user,title,price,description,category,image,rate,count,sale_state).enqueue(object :Callback<CRUDResponse?>{
+            override fun onResponse(call: Call<CRUDResponse?>, response: Response<CRUDResponse?>) {
+                response.body()?.let {
+                    Log.v("AddToBag",it.message)
+                }
+            }
+
+            override fun onFailure(call: Call<CRUDResponse?>, t: Throwable) {
+                Log.v("AddToBag", t.message.orEmpty())
+
+            }
+        })
+
+
+    }
+
+
+    fun getBagProducts(user:String){
+        productsDIF.getBagProducts(user).enqueue(object :Callback<List<ProductModel>?>{
+            override fun onResponse(
+                call: Call<List<ProductModel>?>,
+                response: Response<List<ProductModel>?>
+            ) {
+                response.body()?.let {
+                    basketList.value = it
+                    Log.v("response","Sumeyraa")
+
+                }
+            }
+
+            override fun onFailure(call: Call<List<ProductModel>?>, t: Throwable) {
+                Log.v("getBag", t.message.orEmpty())
+
+
+            }
+        })
+
+    }
 
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

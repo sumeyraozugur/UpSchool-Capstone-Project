@@ -16,7 +16,7 @@ data class ProductModel(
     var productTitle: String?,
 
     @SerializedName("price")
-    var productPrice: String?,
+    var productPrice: Double,
 
     @SerializedName("description")
     var productDescription: String?,
@@ -28,10 +28,14 @@ data class ProductModel(
     var productImageUrl: String?,
 
     @SerializedName("rate")
-    var productRate: String?,
+    var productRate: Double,
 
     @SerializedName("count")
-    var productCount: String?,
+    var productCount: Int,
+
+
+    @SerializedName("saleState")
+    var saleState: Int,
 
 
     ) : Parcelable

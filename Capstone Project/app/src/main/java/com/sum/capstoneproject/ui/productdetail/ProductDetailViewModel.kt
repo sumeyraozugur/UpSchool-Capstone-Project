@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 import com.sum.capstoneproject.model.FavoriteRoomModel
 import com.sum.capstoneproject.repository.ProductRepository
 
-class ProductDetailViewModel(context: Context): ViewModel() {
+class ProductDetailViewModel(context: Context) : ViewModel() {
     private val productRepo = ProductRepository(context)
 
 
@@ -19,8 +19,24 @@ class ProductDetailViewModel(context: Context): ViewModel() {
         _isFavAdded = productRepo.isFavAdded
     }
 
-    fun addFav(favModel:FavoriteRoomModel) {
+    fun addFav(favModel: FavoriteRoomModel) {
         productRepo.addFav(favModel)
+    }
+
+    fun addToBag(
+        user: String,
+        title: String,
+        price: Double,
+        description: String,
+        category: String,
+        image: String,
+        rate: Double,
+        count: Int,
+        sale_state: Int,
+    ) {
+        productRepo.addToBag(user,title,description,category,image,price,rate,count,sale_state)
+
+
     }
 
 

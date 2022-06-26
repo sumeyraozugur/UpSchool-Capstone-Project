@@ -1,13 +1,11 @@
 package com.sum.capstoneproject.ui.favori
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import com.google.android.material.snackbar.Snackbar
 import com.sum.capstoneproject.R
 import com.sum.capstoneproject.databinding.FragmentFavoriBinding
 
@@ -61,9 +59,9 @@ class FavoriFragment : Fragment() {
                 //    if (!it)
                 //}
 
-                booksBasket.observe(viewLifecycleOwner) { list ->
+                productsFavorite.observe(viewLifecycleOwner) { list ->
                     allProductsAdapter.updateList(list)
-                    booksBasketRecyclerAdapter = allProductsAdapter
+                    productsFavoriteRecyclerAdapter = allProductsAdapter
                     favRecycleView.adapter =allProductsAdapter
                    // Log.e("FavoriList",list.toString())
 

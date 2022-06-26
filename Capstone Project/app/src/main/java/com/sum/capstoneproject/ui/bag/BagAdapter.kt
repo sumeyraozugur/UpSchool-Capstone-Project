@@ -1,13 +1,16 @@
 package com.sum.capstoneproject.ui.bag
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 import com.sum.capstoneproject.databinding.ItemBagListBinding
 import com.sum.capstoneproject.model.ProductModel
 
 class BagAdapter : RecyclerView.Adapter<BagAdapter.BagHolder>() {
     private val bagList = ArrayList<ProductModel>()
+    var onRemoveBasketClick: (Int) -> Unit = {}
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BagHolder {
@@ -23,6 +26,20 @@ class BagAdapter : RecyclerView.Adapter<BagAdapter.BagHolder>() {
         RecyclerView.ViewHolder(itemBagListBinding.root) {
 
         fun bind(product: ProductModel) {
+            itemBagListBinding.apply {
+
+                itemBasketObject = product
+
+                Log.e("error",product.toString())
+
+                product.productImageUrl.let {
+                    Picasso.get().load(it).into(itemBagImageView)
+                }
+
+                btnRemoveBasket.setOnClickListener {
+                    onRemoveBasketClick(product.productId!!)
+                }
+            }
 
         }
     }

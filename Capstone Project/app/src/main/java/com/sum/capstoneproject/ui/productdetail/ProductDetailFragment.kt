@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.FirebaseAuth
 import com.sum.capstoneproject.R
 import com.sum.capstoneproject.databinding.FragmentProductDetailBinding
 import com.sum.capstoneproject.model.FavoriteRoomModel
@@ -67,6 +68,27 @@ class ProductDetailFragment : Fragment() {
                                                favPrice = product.productPrice,
                                                favImageUrl = product.productImageUrl))
           view?.let { Snackbar.make(it, R.string.this_product_added_fav, 1000).show() }
+
+        }
+
+        binding.buttonAddToBasket.setOnClickListener {
+            FirebaseAuth.getInstance().currentUser?.let { firebaseUser ->
+                viewModel.addToBag   (
+                    firebaseUser.uid,
+                    product.productTitle.orEmpty(),
+                    product.productPrice,
+                    product.productDescription.orEmpty(),
+                    product.productCategory.orEmpty(),
+                    product.productImageUrl.orEmpty(),
+                    product.productRate,
+                    product.productCount,
+                    product.saleState
+
+                )
+
+
+
+            }
 
         }
 

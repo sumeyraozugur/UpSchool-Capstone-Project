@@ -14,7 +14,7 @@ interface FavProductDao {
     fun addFav(booksBasketRoomModel: FavoriteRoomModel)
 
     @Query("SELECT fav_price FROM product_fav_database")
-    fun getFavPrice (): List<String>?
+    fun getFavPrice (): List<Double>?
 
     @Query("SELECT fav_name  FROM product_fav_database")
     fun getFavNames(): List<String>?

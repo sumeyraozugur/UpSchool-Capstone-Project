@@ -10,13 +10,14 @@ import com.sum.capstoneproject.repository.ProductRepository
 class FavoriViewModel(contex: Context) : ViewModel() {
     private val productRepo = ProductRepository(contex)
 
-    private var _booksBasket = MutableLiveData<List<FavoriteRoomModel>>()
-    val booksBasket: LiveData<List<FavoriteRoomModel>>
-        get() = _booksBasket
+    private var _productsFavorite = MutableLiveData<List<FavoriteRoomModel>>()
+    val productsFavorite: LiveData<List<FavoriteRoomModel>>
+        get() = _productsFavorite
 
     private var _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean>
         get() = _isLoading
+
 
     init {
         getFavori()
@@ -24,12 +25,12 @@ class FavoriViewModel(contex: Context) : ViewModel() {
 
     private fun getFavori() {
         productRepo.fav()
-        _booksBasket = productRepo.productFavList
+        _productsFavorite = productRepo.productFavList
         _isLoading = productRepo.isLoading
     }
 
-    fun deleteFavFrom(bookId: Int) {
-        productRepo.deleteBookFromBasket(bookId)
+    fun deleteFavFrom(favId: Int) {
+        productRepo.deleteProductsFromFav(favId)
         getFavori()
     }
 

@@ -6,7 +6,7 @@
     <data>
 
         <variable
-            name="booksBasketRecyclerAdapter"
+            name="productsFavoriteRecyclerAdapter"
             type="com.sum.capstoneproject.ui.favori.FavoriAdapter" />
 
     </data>

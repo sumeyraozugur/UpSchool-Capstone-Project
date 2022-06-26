@@ -1,6 +1,5 @@
 package com.sum.capstoneproject.ui.favori
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -18,7 +17,7 @@ class FavoriAdapter() : RecyclerView.Adapter<FavoriAdapter.FavoriHolder>() {
         return FavoriHolder(binding)
     }
 
-    override fun onBindViewHolder(holder:FavoriHolder, position: Int) {
+    override fun onBindViewHolder(holder: FavoriHolder, position: Int) {
         holder.bind(favList[position])
 
     }
@@ -30,7 +29,7 @@ class FavoriAdapter() : RecyclerView.Adapter<FavoriAdapter.FavoriHolder>() {
             itemFavListBinding.apply {
 
                 itemFavObject = favModel
-                Log.e("error",favModel.toString())
+                //Log.e("error",favModel.toString())
 
                 favModel.favImageUrl.let {
                     Picasso.get().load(it).into(itemFavImageView)
@@ -38,9 +37,6 @@ class FavoriAdapter() : RecyclerView.Adapter<FavoriAdapter.FavoriHolder>() {
                 btnRemoveFav.setOnClickListener {
                     onRemoveFavClick(favModel.favId)
                 }
-
-
-
 
 
             }

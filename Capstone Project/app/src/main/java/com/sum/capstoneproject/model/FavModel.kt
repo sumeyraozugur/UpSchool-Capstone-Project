@@ -19,7 +19,7 @@ class FavModel (
     var favDescription: String?,
 
     @SerializedName("fav_price") @Expose
-    var favPrice: String?,
+    var favPrice: Double,
 
    // @SerializedName("fav_user") @Expose
     //var favUser: String?,

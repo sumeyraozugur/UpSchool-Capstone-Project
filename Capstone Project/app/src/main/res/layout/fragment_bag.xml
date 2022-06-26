@@ -5,6 +5,10 @@
 
     <data>
 
+        <variable
+            name="productsBagRecyclerAdapter"
+            type="com.sum.capstoneproject.ui.bag.BagAdapter" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,10 +18,12 @@
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
+            android:id="@+id/bagRecyclerView"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            app:adapter="@{productsBagRecyclerAdapter}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
             android:layout_marginStart="1dp"
             android:layout_marginTop="1dp"
             android:layout_marginEnd="1dp"

@@ -23,12 +23,12 @@ class ProductAdapter : RecyclerView.Adapter<ProductAdapter.ProductHolder>() {
         holder.bind(productList[position])
     }
 
-    inner class ProductHolder(private var bestSellerItemBinding: ItemNewProductListBinding) :
-        RecyclerView.ViewHolder(bestSellerItemBinding.root) {
+    inner class ProductHolder(private var itemNewProductListBinding: ItemNewProductListBinding) :
+        RecyclerView.ViewHolder(itemNewProductListBinding.root) {
 
         fun bind(product: ProductModel) {
 
-            bestSellerItemBinding.apply {
+            itemNewProductListBinding.apply {
 
                 itemNewProductObject = product
 

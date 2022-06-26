@@ -13,7 +13,6 @@ import com.sum.capstoneproject.databinding.FragmentHomeBinding
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
-    //private val viewModel: HomeViewModel by viewModels()
     private val viewModel by lazy {HomeViewModel(requireContext())}
     private val allProductsAdapter by lazy { ProductAdapter() }
 
@@ -27,7 +26,6 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        // Inflate the layout for this fragment
         _binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
         return binding.root
     }

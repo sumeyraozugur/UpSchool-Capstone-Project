@@ -16,7 +16,7 @@ data class FavoriteRoomModel(
     var favName: String?,
 
     @ColumnInfo(name ="fav_price")
-    var favPrice: String?,
+    var favPrice: Double?,
 
     @ColumnInfo(name = "fav_ImageUrl")
     var favImageUrl: String?
