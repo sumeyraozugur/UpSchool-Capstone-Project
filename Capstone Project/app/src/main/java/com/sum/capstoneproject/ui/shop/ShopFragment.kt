@@ -11,8 +11,6 @@ import com.sum.capstoneproject.databinding.FragmentShopBinding
 class ShopFragment : Fragment() {
     private var _binding: FragmentShopBinding? = null
     private val binding get() = _binding!!
-
-
     private val viewModel by lazy { ShopViewModel(requireContext()) }
     private val categoryProductsAdapter by lazy { ShopAdapter() }
 
@@ -53,7 +51,6 @@ class ShopFragment : Fragment() {
                     shopRecycleView.apply {
                         setHasFixedSize(true)
                         adapter = categoryProductsAdapter.also { adapter ->
-                            System.out.println(list)
                             adapter.updateList(list)
                         }
                     }
@@ -67,12 +64,13 @@ class ShopFragment : Fragment() {
     override fun onCreateOptionsMenu(menu: Menu, menuInflater: MenuInflater) {
         menuInflater.inflate(R.menu.search_menu, menu)
 
-        //val item = menu.findItem(R.id.ic_search)
+
         //val searchView = item.actionView as SearchView
         //searchView.setOnQueryTextListener(this)
-
 
     }
 
 
 }
+
+

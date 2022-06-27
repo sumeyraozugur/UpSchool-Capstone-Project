@@ -52,6 +52,15 @@ class ShopAdapter : RecyclerView.Adapter<ShopAdapter.ShopHolder>(), Filterable {
                     categoryList
                 } else {
                     val resultList = ArrayList<String>()
+                    for (row in resultList) {
+                        row?.let {
+                            if (it.lowercase().contains(searchText)) {
+                                    resultList.add(row)
+                                }
+                        }
+
+                        }
+
 
                     resultList
                 }
