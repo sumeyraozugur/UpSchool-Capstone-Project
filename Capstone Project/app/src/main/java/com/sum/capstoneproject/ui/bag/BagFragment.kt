@@ -8,9 +8,12 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.sum.capstoneproject.R
 import com.sum.capstoneproject.databinding.FragmentBagBinding
+import java.text.NumberFormat
+import java.util.*
 
 
 class BagFragment : Fragment() {
@@ -61,6 +64,19 @@ class BagFragment : Fragment() {
             with(viewModel) {
 
                 bagList.observe(viewLifecycleOwner) { productList ->
+
+
+                    var totalPrice = 0f
+                    for (i in productList) {
+                        i.productPrice?.let {
+                            totalPrice += it.toFloat()
+                        }
+                    }
+                    binding.basketText.text =
+                        NumberFormat.getCurrencyInstance(Locale("tr", "TR")).format(totalPrice)
+
+
+
                     bagRecyclerView.apply {
                         setHasFixedSize(true)
                         bagAdapter.updateList(productList)
@@ -74,6 +90,12 @@ class BagFragment : Fragment() {
                             }
 
                         }
+                        //     view?.let { Snackbar.make(it, R.string.this_basket__empty, 1000).show() }
+
+
+
+
+
 
 
                     }

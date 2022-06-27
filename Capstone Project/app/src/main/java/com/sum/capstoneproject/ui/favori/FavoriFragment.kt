@@ -65,12 +65,7 @@ class FavoriFragment : Fragment() {
                   //  favRecycleView.adapter =allProductsAdapter
                    // Log.e("FavoriList",list.toString())
 
-                 /*   if (list.isNotEmpty()) {
-                        goToPayButton.setOnClickListener {
-                            it.findNavController()
-                                .navigate(R.id.action_booksBasketFragment_to_paymentFragment)
-                        }
-                    }*/
+
                 }
             }
         }

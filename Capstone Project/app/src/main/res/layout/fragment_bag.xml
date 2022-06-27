@@ -31,8 +31,8 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.button.MaterialButton
-            style="@style/button_style"
             android:id="@+id/btnBagBasket"
+            style="@style/button_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="52dp"
@@ -45,14 +45,24 @@
             android:id="@+id/basketText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="168dp"
-            android:layout_marginBottom="13dp"
-            android:padding="8dp"
-            android:text="Total= 0"
-            app:layout_constraintBottom_toBottomOf="@+id/btnBagBasket"
+            android:layout_marginEnd="127dp"
+            android:layout_marginBottom="28dp"
+            android:paddingTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btnBagBasket"
+            tools:text="125" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="Total: "
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/basketText"
+            app:layout_constraintEnd_toStartOf="@+id/basketText"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/btnBagBasket" />
+            app:layout_constraintTop_toTopOf="@+id/basketText" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

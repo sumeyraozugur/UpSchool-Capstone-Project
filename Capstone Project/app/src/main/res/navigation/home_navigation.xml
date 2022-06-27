@@ -51,6 +51,6 @@
     <fragment
         android:id="@+id/successFragment"
         android:name="com.sum.capstoneproject.SuccessFragment"
-        android:label="fragment_success"
+        android:label="Success Page"
         tools:layout="@layout/fragment_success" />
 </navigation>
