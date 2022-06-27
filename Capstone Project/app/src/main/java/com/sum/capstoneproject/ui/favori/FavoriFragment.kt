@@ -62,7 +62,7 @@ class FavoriFragment : Fragment() {
                 productsFavorite.observe(viewLifecycleOwner) { list ->
                     allProductsAdapter.updateList(list)
                     productsFavoriteRecyclerAdapter = allProductsAdapter
-                    favRecycleView.adapter =allProductsAdapter
+                  //  favRecycleView.adapter =allProductsAdapter
                    // Log.e("FavoriList",list.toString())
 
                  /*   if (list.isNotEmpty()) {

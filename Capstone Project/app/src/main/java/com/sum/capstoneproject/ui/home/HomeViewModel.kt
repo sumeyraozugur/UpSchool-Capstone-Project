@@ -21,7 +21,7 @@ class HomeViewModel(context:Context) : ViewModel() {
         get() = _isLoading
 
     init {
-        getProduct()
+        getProduct() //class oluştuğu gibi bu block çalışır
     }
 
     private fun getProduct(){

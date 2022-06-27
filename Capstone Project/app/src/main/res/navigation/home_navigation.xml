@@ -22,7 +22,11 @@
         android:id="@+id/bagFragment"
         android:name="com.sum.capstoneproject.ui.bag.BagFragment"
         android:label=" My Bag Page"
-        tools:layout="@layout/fragment_bag" />
+        tools:layout="@layout/fragment_bag" >
+        <action
+            android:id="@+id/action_bagFragment_to_successFragment"
+            app:destination="@id/successFragment" />
+    </fragment>
     <fragment
         android:id="@+id/favoriFragment"
         android:name="com.sum.capstoneproject.ui.favori.FavoriFragment"
@@ -44,4 +48,9 @@
             android:id="@+id/action_productDetailFragment_to_favoriFragment"
             app:destination="@id/favoriFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="com.sum.capstoneproject.SuccessFragment"
+        android:label="fragment_success"
+        tools:layout="@layout/fragment_success" />
 </navigation>

@@ -89,6 +89,7 @@ class ProductDetailFragment : Fragment() {
 
 
             }
+            view?.let { Snackbar.make(it, R.string.this_product_added_bag, 1000).show() }
 
         }
 

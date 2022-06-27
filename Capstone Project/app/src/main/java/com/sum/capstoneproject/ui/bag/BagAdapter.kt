@@ -30,14 +30,14 @@ class BagAdapter : RecyclerView.Adapter<BagAdapter.BagHolder>() {
 
                 itemBasketObject = product
 
-                Log.e("error",product.toString())
 
                 product.productImageUrl.let {
                     Picasso.get().load(it).into(itemBagImageView)
                 }
 
                 btnRemoveBasket.setOnClickListener {
-                    onRemoveBasketClick(product.productId!!)
+                    onRemoveBasketClick(product.productId)
+                    Log.v("onRemove",product.productId.toString())
                 }
             }
 

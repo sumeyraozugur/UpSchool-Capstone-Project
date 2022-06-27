@@ -1,11 +1,13 @@
 package com.sum.capstoneproject.ui.bag
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import com.sum.capstoneproject.R
 import com.sum.capstoneproject.databinding.FragmentBagBinding
@@ -16,6 +18,7 @@ class BagFragment : Fragment() {
     private val binding get() = _binding!!
     private val viewModel by lazy { BagViewModel(requireContext()) }
     private val bagAdapter by lazy { BagAdapter() }
+    var firebaseUser =FirebaseAuth.getInstance().currentUser
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,8 +37,20 @@ class BagFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        FirebaseAuth.getInstance().currentUser?.let {
+        firebaseUser?.let {
             viewModel.getBagProducts(it.uid)
+        }
+        with(binding) {
+
+           // bagRecyclerView.setHasFixedSize(true)
+            bagAdapter.onRemoveBasketClick = {
+                //Log.v("onRemove",it.toString())
+                viewModel.deleteBagFrom(it,  firebaseUser!!.uid)
+               Log.v("onRemove",firebaseUser!!.uid)
+            }
+
+
+
         }
 
         initObservers()
@@ -49,17 +64,25 @@ class BagFragment : Fragment() {
                     bagRecyclerView.apply {
                         setHasFixedSize(true)
                         bagAdapter.updateList(productList)
-                        productsBagRecyclerAdapter=bagAdapter
+                        productsBagRecyclerAdapter = bagAdapter
+
+
+                        if (productList.isNotEmpty()) {
+                            btnBagBasket.setOnClickListener {
+                                it.findNavController()
+                                    .navigate(R.id.action_bagFragment_to_successFragment)
+                            }
+
+                        }
+
 
                     }
 
 
                 }
-
             }
         }
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()

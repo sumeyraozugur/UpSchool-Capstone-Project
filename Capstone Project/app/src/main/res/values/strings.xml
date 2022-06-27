@@ -25,5 +25,6 @@
     <string name="registered_mail">E-mail address already registered!</string>
     <string name="fav_image_description">fav_image_description</string>
     <string name="this_product_added_fav">This product added in favList</string>
+    <string name="this_product_added_bag">This product added in Bag</string>
 
 </resources>

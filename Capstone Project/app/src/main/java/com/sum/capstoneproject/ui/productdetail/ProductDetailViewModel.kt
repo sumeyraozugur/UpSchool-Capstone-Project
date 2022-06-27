@@ -34,7 +34,7 @@ class ProductDetailViewModel(context: Context) : ViewModel() {
         count: Int,
         sale_state: Int,
     ) {
-        productRepo.addToBag(user,title,description,category,image,price,rate,count,sale_state)
+        productRepo.addBag(user,title,description,category,image,price,rate,count,sale_state)
 
 
     }

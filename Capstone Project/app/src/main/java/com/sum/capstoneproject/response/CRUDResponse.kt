@@ -3,9 +3,9 @@ package com.sum.capstoneproject.response
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-data class CRUDResponse (@SerializedName("success")
+data class CRUDResponse (@SerializedName("status")
                          @Expose
-                         var success:Int,
+                         var status:Int,
                          @SerializedName("message")
                          @Expose
                          var message:String)

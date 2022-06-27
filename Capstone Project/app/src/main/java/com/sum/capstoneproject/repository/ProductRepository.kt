@@ -21,6 +21,7 @@ class ProductRepository(context: Context) {
     var productFavList = MutableLiveData<List<FavoriteRoomModel>>()
     var isLoading = MutableLiveData<Boolean>()
     var isFavAdded = MutableLiveData<Boolean>()
+    var basketMesssage =MutableLiveData<String>()
 
     private val productsDIF: ProductApi = ApiUtils.getProductsDAOInterface()
     private val favProductDao: FavProductDao? =
@@ -116,16 +117,16 @@ class ProductRepository(context: Context) {
     }
 
 
-    fun addToBag(user:String,title:String,description:String,category:String,image:String,price:Double,rate:Double,count:Int,sale_state:Int){
+    fun addBag(user:String, title:String, description:String, category:String, image:String, price:Double, rate:Double, count:Int, sale_state:Int){
         productsDIF.addToBag(user,title,price,description,category,image,rate,count,sale_state).enqueue(object :Callback<CRUDResponse?>{
             override fun onResponse(call: Call<CRUDResponse?>, response: Response<CRUDResponse?>) {
                 response.body()?.let {
-                    Log.v("AddToBag",it.message)
+                   // Log.v("AddToBag",it.message)
                 }
             }
 
             override fun onFailure(call: Call<CRUDResponse?>, t: Throwable) {
-                Log.v("AddToBag", t.message.orEmpty())
+               // Log.v("AddToBag", t.message.orEmpty())
 
             }
         })
@@ -142,12 +143,34 @@ class ProductRepository(context: Context) {
             ) {
                 response.body()?.let {
                     basketList.value = it
-                    Log.v("response","Sumeyraa")
+                   // Log.v("response","Sumeyraa")
 
                 }
             }
 
             override fun onFailure(call: Call<List<ProductModel>?>, t: Throwable) {
+               // Log.v("getBag", t.message.orEmpty())
+
+
+            }
+        })
+
+    }
+
+    fun deleteProductsFromBasket(productId: Int) {
+        productsDIF.deleteFromBag(productId).enqueue(object :Callback<CRUDResponse?>{
+            override fun onResponse(
+                call: Call<CRUDResponse?>,
+                response: Response<CRUDResponse?>
+            ) {
+                response.body()?.let {
+                    basketMesssage.value = it.message
+
+
+                }
+            }
+
+            override fun onFailure(call: Call<CRUDResponse?>, t: Throwable) {
                 Log.v("getBag", t.message.orEmpty())
 
 
@@ -155,6 +178,10 @@ class ProductRepository(context: Context) {
         })
 
     }
+
+
+
+
 
 
 

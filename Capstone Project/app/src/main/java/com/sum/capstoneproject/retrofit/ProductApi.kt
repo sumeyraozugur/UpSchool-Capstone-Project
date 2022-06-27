@@ -40,6 +40,13 @@ interface ProductApi {
     ):Call<List<ProductModel>>
 
 
+    @POST("delete_from_bag.php")
+    @FormUrlEncoded
+    fun deleteFromBag(
+            @Field("id") id: Int
+    ): Call<CRUDResponse>
+
+
 
 
 }

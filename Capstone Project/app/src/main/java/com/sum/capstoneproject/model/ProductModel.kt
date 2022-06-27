@@ -7,7 +7,7 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class ProductModel(
     @SerializedName("id")
-    var productId: Int? = 0,
+    var productId: Int = 0,
 
     @SerializedName("user")
     var productUser: String?,

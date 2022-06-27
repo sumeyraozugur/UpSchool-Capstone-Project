@@ -32,7 +32,7 @@ class FavoriAdapter() : RecyclerView.Adapter<FavoriAdapter.FavoriHolder>() {
                 //Log.e("error",favModel.toString())
 
                 favModel.favImageUrl.let {
-                    Picasso.get().load(it).into(itemFavImageView)
+                    Picasso.get() .load(it).into(itemFavImageView)
                 }
                 btnRemoveFav.setOnClickListener {
                     onRemoveFavClick(favModel.favId)
