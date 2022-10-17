@@ -46,12 +46,9 @@ class  FirebaseRepository {
                     _isUpdatePassword.value = true
                     Log.d(SIGN_IN_TAG, SUCCESS)
 
-
-
                 } else {
                     _isUpdatePassword.value = false
                     System.out.println("Update Password")
-
 
                 }
             }
@@ -74,19 +71,15 @@ class  FirebaseRepository {
     }
 
     fun signUp(eMail: String, password: String) {
-
         auth.createUserWithEmailAndPassword(eMail, password).addOnCompleteListener { task ->
 
             if (task.isSuccessful) {
-
                 _isRegister.value = true
                 Log.d(SIGN_UP_TAG, SUCCESS)
-
-            } else {
+            }else {
                 _isRegister.value = false
                 Log.w(SIGN_UP_TAG, FAILURE, task.exception)
             }
-
         }
     }
 

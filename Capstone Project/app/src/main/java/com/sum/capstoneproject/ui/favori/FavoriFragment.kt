@@ -42,8 +42,6 @@ class FavoriFragment : Fragment() {
             allProductsAdapter.onRemoveFavClick = {
                 viewModel.deleteFavFrom(it)
             }
-
-
         }
 
 

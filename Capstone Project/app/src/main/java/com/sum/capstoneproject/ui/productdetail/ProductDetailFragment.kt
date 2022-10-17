@@ -55,9 +55,6 @@ class ProductDetailFragment : Fragment() {
         binding.apply {
 
             detailFragmentObject = product
-
-
-
         }
 //Detaya görseli getirme
        Glide.with(this).load(product.productImageUrl)

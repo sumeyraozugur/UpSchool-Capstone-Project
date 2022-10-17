@@ -29,6 +29,7 @@ class FavoriViewModel(contex: Context) : ViewModel() {
         _isLoading = productRepo.isLoading
     }
 
+
     fun deleteFavFrom(favId: Int) {
         productRepo.deleteProductsFromFav(favId)
         getFavori()

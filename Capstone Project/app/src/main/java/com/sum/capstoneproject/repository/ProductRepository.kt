@@ -100,7 +100,6 @@ class ProductRepository(context: Context) {
     }
 
     fun addFav(favModel: FavoriteRoomModel) {
-
         favProductDao?.getFavNames()?.let {
 
             isFavAdded.value = if (it.contains(favModel.favName).not()) {
@@ -146,11 +145,8 @@ class ProductRepository(context: Context) {
 
             override fun onFailure(call: Call<CRUDResponse?>, t: Throwable) {
                 // Log.v("AddToBag", t.message.orEmpty())
-
             }
         })
-
-
     }
 
 
@@ -169,11 +165,8 @@ class ProductRepository(context: Context) {
 
             override fun onFailure(call: Call<List<ProductModel>?>, t: Throwable) {
                 // Log.v("getBag", t.message.orEmpty())
-
-
             }
         })
-
     }
 
     fun deleteProductsFromBasket(productId: Int) {
@@ -184,22 +177,16 @@ class ProductRepository(context: Context) {
             ) {
                 response.body()?.let {
                     basketMesssage.value = it.message
-
-
                 }
             }
+
 
             override fun onFailure(call: Call<CRUDResponse?>, t: Throwable) {
                 Log.v("getBag", t.message.orEmpty())
 
-
             }
         })
-
     }
-
-
-
 }
 
 

@@ -28,10 +28,6 @@ class RegisterViewModel : ViewModel() {
         get() = _isRegister
 
 
-
-
-
-
     init {
         _isRegister = usersRepo.getIsSignUp()
     }

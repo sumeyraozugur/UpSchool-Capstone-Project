@@ -38,7 +38,6 @@ class ProductAdapter : RecyclerView.Adapter<ProductAdapter.ProductHolder>() {
 
                 itemNewProduct.setOnClickListener {
                     val action =HomeFragmentDirections.actionHomeFragmentToProductDetailFragment(product)
-
                     Navigation.findNavController(it).navigate(action)
 
                 }

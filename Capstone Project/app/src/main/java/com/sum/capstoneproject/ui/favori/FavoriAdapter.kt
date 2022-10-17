@@ -37,8 +37,6 @@ class FavoriAdapter() : RecyclerView.Adapter<FavoriAdapter.FavoriHolder>() {
                 btnRemoveFav.setOnClickListener {
                     onRemoveFavClick(favModel.favId)
                 }
-
-
             }
         }
     }

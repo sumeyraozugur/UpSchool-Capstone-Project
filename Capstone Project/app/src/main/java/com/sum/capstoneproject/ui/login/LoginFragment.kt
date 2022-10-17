@@ -46,14 +46,13 @@ class LoginFragment : Fragment() {
 
         with(viewModel) {
             this.currentUser() //should call
+
             isCurrentUser.observe(viewLifecycleOwner){
-
-                if(it){
-
-                    findNavController().navigate(R.id.action_loginFragment_to_home_navigation2)
-
+                if(it){ findNavController().navigate(R.id.action_loginFragment_to_home_navigation2)
                 }
             }
+
+
             isInfosValid.observe(viewLifecycleOwner) {
 
                 if (it.not()) Snackbar.make(requireView(),

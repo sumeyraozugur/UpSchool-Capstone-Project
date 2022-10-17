@@ -10,7 +10,6 @@ import retrofit2.http.POST
 
 interface ProductApi {
 
-
     @GET("get_products.php")
     fun allProduct(): Call<List<ProductModel>>
 
@@ -43,7 +42,8 @@ interface ProductApi {
     @POST("delete_from_bag.php")
     @FormUrlEncoded
     fun deleteFromBag(
-            @Field("id") id: Int
+            @Field("id")
+            id: Int
     ): Call<CRUDResponse>
 
 
